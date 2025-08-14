@@ -208,19 +208,19 @@
             background: rgba(255, 193, 7, 0.08);
             border: 2px solid rgba(255, 193, 7, 0.4);
             clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            animation: float 8s ease-in-out infinite;
+            animation: fall 8s linear infinite;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
 
-        .hexagon:nth-child(7) { top: 10%; left: 10%; animation-delay: 0s; }
-        .hexagon:nth-child(8) { top: 20%; right: 10%; animation-delay: 2s; }
-        .hexagon:nth-child(9) { bottom: 20%; left: 20%; animation-delay: 4s; }
-        .hexagon:nth-child(10) { bottom: 10%; right: 20%; animation-delay: 1s; }
-        .hexagon:nth-child(11) { top: 50%; left: 5%; animation-delay: 3s; }
-        .hexagon:nth-child(12) { top: 30%; right: 25%; animation-delay: 5s; }
-        .hexagon:nth-child(13) { bottom: 35%; right: 5%; animation-delay: 1.5s; }
-
+        .hexagon:nth-child(7) { left: 10%; animation-delay: 0s; }
+        .hexagon:nth-child(8) { right: 10%; animation-delay: 2s; }
+        .hexagon:nth-child(9) { left: 20%; animation-delay: 4s; }
+        .hexagon:nth-child(10) { right: 20%; animation-delay: 1s; }
+        .hexagon:nth-child(11) { left: 5%; animation-delay: 3s; }
+        .hexagon:nth-child(12) { right: 25%; animation-delay: 5s; }
+        .hexagon:nth-child(13) { right: 5%; animation-delay: 1.5s; }
+        
         /* Show/hide elements based on theme */
         body.edgy .floating-element { opacity: 0; pointer-events: none; display: none; }
         body.edgy .hexagon { opacity: 1; }
@@ -239,6 +239,23 @@
             50% { transform: translateY(-30px) rotate(10deg); opacity: 1; }
         }
 
+        @keyframes fall {
+            0% { 
+                transform: translateY(-150px) rotate(0deg); 
+                opacity: 0; 
+            }
+            10% { 
+                opacity: 1; 
+            }
+            90% { 
+            opacity: 1; 
+            }
+            100% { 
+                transform: translateY(100vh) rotate(360deg); 
+                opacity: 0; 
+            }
+        }
+        
         /* Header */
         header {
             position: fixed;
