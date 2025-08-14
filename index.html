@@ -204,10 +204,10 @@
         .hexagon {
             position: absolute;
             width: 120px;
-            height: 120px;
+            height: 104px;
             background: rgba(255, 193, 7, 0.08);
-            border: 2px solid rgba(255, 193, 7, 0.3);
-            clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+            border: 4px solid rgba(255, 193, 7, 0.4);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
             animation: float 8s ease-in-out infinite;
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -221,8 +221,11 @@
         .hexagon:nth-child(12) { top: 30%; right: 25%; animation-delay: 5s; }
         .hexagon:nth-child(13) { bottom: 35%; right: 5%; animation-delay: 1.5s; }
 
+        /* Show/hide elements based on theme */
         body.edgy .floating-element { opacity: 0; pointer-events: none; display: none; }
         body.edgy .hexagon { opacity: 1; }
+        body.whimsical .hexagon { opacity: 0; pointer-events: none; display: none; }
+        body.whimsical .floating-element { opacity: 1; }
 
         body.edgy .bg-animation {
             background: 
