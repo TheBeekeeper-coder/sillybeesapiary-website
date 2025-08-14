@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silly Bees Apiary | Raw Wildflower Honey - Palestine, Texas | Anderson, Dallas, Ellis, Henderson, Navarro Counties</title>
-    <meta name="description" content="Silly Bees Apiary produces organic, raw wildflower honey in Anderson County near Palestine, Texas. Serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Family-owned beekeepers for 3 years. Bee removal services in Ellis County.">
+    <meta name="description" content="Silly Bees Apiary produces organic, raw wildflower honey in Palestine, Texas and Midlothian, Texas. Serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Family-owned beekeepers for 3 years. Bee removal services in Ellis County.">
     <meta name="keywords" content="raw honey Palestine Texas, wildflower honey Ellis County, local honey Navarro County, organic honey Henderson County, bee removal Ellis County, honey Hillsboro, Dallas honey, Anderson County apiary">
     <meta name="author" content="Silly Bees Apiary">
     <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Palestine, Anderson County, Texas; Midlothian, Ellis County, Texas">
+    <meta name="ICBM" content="31.7621, -95.6307; 32.4823, -96.9947">
     
     <!-- Local Business Schema -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Silly Bees Apiary",
+  "description": "Organic raw wildflower honey producer serving North and East Texas",
+  "url": "https://sillybeesapiary.com",
+  "telephone": "214-769-5511",
+  "email": "TheBeekeeper@sillybeesapiary.com",
+  "location": [
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Silly Bees Apiary",
-      "description": "Organic raw wildflower honey producer serving East Texas",
-      "url": "https://sillybeesapiary.com",
-      "telephone": "",
-      "email": "TheBeekeeper@sillybeesapiary.com",
+      "@type": "Place",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Palestine",
@@ -30,39 +36,34 @@
         "latitude": "31.7621",
         "longitude": "-95.6307"
       },
-      "areaServed": [
-        "Anderson County, TX",
-        "Dallas County, TX",
-        "Ellis County, TX", 
-        "Henderson County, TX",
-        "Navarro County, TX"
-      ],
-      "priceRange": "$$",
-      "paymentAccepted": "Cash, Check",
-      "currenciesAccepted": "USD",
-      "foundingDate": "2022",
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Raw Wildflower Honey",
-            "description": "Organic, locally produced raw wildflower honey"
-          }
-        },
-        {
-          "@type": "Offer", 
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Bee Removal Service",
-            "description": "Professional bee removal services in Ellis County",
-            "areaServed": "Ellis County, TX"
-          }
-        }
-      ]
+      "name": "Palestine Location"
+    },
+    {
+      "@type": "Place", 
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Midlothian",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "32.4823",
+        "longitude": "-96.9947"
+      },
+      "name": "Midlothian Location"
     }
-    </script>
-    
+  ],
+  "areaServed": [
+    "Anderson County, TX",
+    "Dallas County, TX", 
+    "Ellis County, TX",
+    "Henderson County, TX",
+    "Navarro County, TX"
+  ]
+  // ... rest of your schema
+}
+</script>    
     <!-- Open Graph for Social Media -->
     <meta property="og:title" content="Silly Bees Apiary - Raw Wildflower Honey from Palestine, Texas">
     <meta property="og:description" content="Family-owned apiary producing organic, raw wildflower honey. Serving Anderson, Dallas, Ellis, Henderson, Navarro Counties.">
@@ -742,7 +743,7 @@
             <h1>Silly Bees Apiary</h1>
             <div class="tagline" id="tagline">Sweet Dreams Are Made of Bees! 🍯</div>
             <p class="subtitle" id="subtitle">
-                In Anderson County near Palestine, Texas, we harvest nature's sweetest treasure! 
+                Based in Palestine, Texas and Midlothian, Texas, we harvest nature's sweetest treasure! 
                 Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of buzzing with excitement, delivering liquid sunshine with love!
             </p>
             <a href="#about" class="cta-button" id="ctaButton">Buzz With Us! 🐝</a>
@@ -755,7 +756,7 @@
         <div class="grid">
             <div class="card">
                 <h3 id="card1Title">🐝 Happy Bee Families</h3>
-                <p id="card1Text">Located in Anderson County near Palestine, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!</p>
+                <p id="card1Text">Located Based in Palestine, Texas and Midlothian, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!</p>
             </div>
             <div class="card">
                 <h3 id="card2Title">🍯 Liquid Sunshine</h3>
@@ -796,12 +797,12 @@
             whimsical: {
                 logo: "🐝 SILLY BEES APIARY",
                 tagline: "Sweet Dreams Are Made of Bees! 🍯",
-                subtitle: "In Anderson County near Palestine, Texas, we harvest nature's sweetest treasure! Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of buzzing with excitement, delivering liquid sunshine with love!",
+                subtitle: "Based in Palestine, Texas and Midlothian, Texas, we harvest nature's sweetest treasure! Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of buzzing with excitement, delivering liquid sunshine with love!",
                 ctaButton: "Buzz With Us! 🐝",
                 scrollIndicator: "🍯",
                 aboutTitle: "Our Sweet Story 🌻",
                 card1Title: "🐝 Happy Bee Families",
-                card1Text: "Located in Anderson County near Palestine, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!",
+                card1Text: "Located in Palestine, Texas and Midlothian, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!",
                 card2Title: "🍯 Liquid Sunshine",
                 card2Text: "Every golden jar of our raw wildflower honey is a gift from nature! Harvested with love and respect using gentle, chemical-free methods that keep our buzzing friends happy. Spreading sweetness across Anderson, Dallas, Ellis, Henderson, and Navarro Counties!",
                 card3Title: "🌟 Bee Heroes",
@@ -819,12 +820,12 @@
             edgy: {
                 logo: "SILLY BEES",
                 tagline: "THE HIVE NEVER SLEEPS",
-                subtitle: "In Anderson County near Palestine, Texas, we harvest liquid gold from nature's most organized society. Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of dedicated beekeeping, delivering premium honey with precision.",
+                subtitle: "Based in Palestine, Texas and Midlothian, Texas, we harvest liquid gold from nature's most organized society. Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of dedicated beekeeping, delivering premium honey with precision.",
                 ctaButton: "Enter the Hive",
                 scrollIndicator: "▼",
                 aboutTitle: "THE OPERATION",
                 card1Title: "🐝 THE COLONY",
-                card1Text: "Located in Anderson County near Palestine, Texas, our bees are more than insects—they're a highly trained operation. Each hive houses 50,000+ workers producing the finest organic, raw wildflower honey in East Texas. Three years of family beekeeping expertise.",
+                card1Text: "Located in Palestine, Texas and Midlothian, Texas, our bees are more than insects—they're a highly trained operation. Each hive houses 50,000+ workers producing the finest organic, raw wildflower honey in East Texas. Three years of family beekeeping expertise.",
                 card2Title: "🍯 LIQUID GOLD",
                 card2Text: "Every jar of our raw wildflower honey is earned through sustainable, chemical-free methods. Harvested with respect for the ancient contract between beekeeper and bee, serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties.",
                 card3Title: "⚡ SPECIALIZED SERVICES",
