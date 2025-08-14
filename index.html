@@ -36,18 +36,21 @@
 
         .hexagon {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 193, 7, 0.05);
-            border: 1px solid rgba(255, 193, 7, 0.2);
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 193, 7, 0.08);
+            border: 2px solid rgba(255, 193, 7, 0.3);
             clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
-            animation: float 6s ease-in-out infinite;
+            animation: float 8s ease-in-out infinite;
         }
 
         .hexagon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
         .hexagon:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
         .hexagon:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 4s; }
         .hexagon:nth-child(4) { bottom: 10%; right: 20%; animation-delay: 1s; }
+        .hexagon:nth-child(5) { top: 50%; left: 5%; animation-delay: 3s; }
+        .hexagon:nth-child(6) { top: 30%; right: 25%; animation-delay: 5s; }
+        .hexagon:nth-child(7) { bottom: 35%; right: 5%; animation-delay: 1.5s; }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -305,6 +308,9 @@
 </head>
 <body>
     <div class="bg-animation">
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
         <div class="hexagon"></div>
         <div class="hexagon"></div>
         <div class="hexagon"></div>
