@@ -220,7 +220,7 @@
         .hexagon:nth-child(12) { top: 30%; right: 25%; animation-delay: 5s; }
         .hexagon:nth-child(13) { bottom: 35%; right: 5%; animation-delay: 1.5s; }
 
-        body.edgy .floating-element { opacity: 0; }
+        body.edgy .floating-element { opacity: 0; pointer-events: none; display: none; }
         body.edgy .hexagon { opacity: 1; }
 
         body.edgy .bg-animation {
@@ -569,97 +569,6 @@
             line-height: 1.6;
         }
 
-        /* Territory specific styles */
-        .territory {
-            padding: 100px 50px;
-            border-radius: 30px;
-            margin: 50px auto;
-            max-width: 1200px;
-            transition: all 0.5s ease;
-        }
-
-        body.whimsical .territory {
-            background: rgba(255, 248, 225, 0.9);
-            box-shadow: 0 10px 40px rgba(255, 179, 0, 0.2);
-        }
-
-        body.edgy .territory {
-            background: rgba(255, 255, 255, 0.02);
-            border-top: 1px solid rgba(255, 193, 7, 0.3);
-            border-bottom: 1px solid rgba(255, 193, 7, 0.3);
-            border-radius: 15px;
-        }
-
-        .territory-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .stat-item {
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border-radius: 20px;
-        }
-
-        body.whimsical .stat-item {
-            background: rgba(255, 255, 255, 0.9);
-            border: 3px solid #ffb300;
-        }
-
-        body.whimsical .stat-item:hover {
-            transform: scale(1.05);
-            border-color: #ff6f00;
-            box-shadow: 0 10px 25px rgba(255, 111, 0, 0.3);
-        }
-
-        body.edgy .stat-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 193, 7, 0.2);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        body.edgy .stat-item:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 193, 7, 0.5);
-            box-shadow: 0 15px 30px rgba(255, 193, 7, 0.1);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            transition: all 0.5s ease;
-        }
-
-        body.whimsical .stat-number {
-            font-family: 'Fredoka', sans-serif;
-            color: #ff6f00;
-        }
-
-        body.edgy .stat-number {
-            font-family: 'Orbitron', monospace;
-            color: #ffc107;
-            font-weight: 900;
-        }
-
-        .stat-label {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.5s ease;
-        }
-
-        body.whimsical .stat-label {
-            color: #5d4037;
-        }
-
-        body.edgy .stat-label {
-            color: #cccccc;
-        }
-
         /* Contact specific */
         .contact-info {
             max-width: 600px;
@@ -823,7 +732,6 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#territory">Territory</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -856,48 +764,6 @@
             <div class="card">
                 <h3 id="card3Title">🌟 Bee Heroes</h3>
                 <p id="card3Text">Beyond honey magic, we're bee rescue heroes! When unwanted bee families need a new home in Ellis County, our caring team provides safe, gentle relocation services. Every bee deserves a happy ending and a chance to keep making the world sweeter!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="territory" id="territory">
-        <div class="map-container">
-            <h2 class="section-title" id="territoryTitle">Where We Spread Sweetness 🗺️</h2>
-            <p style="text-align: center; margin: 20px auto 40px; max-width: 600px; font-size: 1.2rem;" id="mapDescription">
-                Our sweet home base: <strong style="color: #ff6f00;">Palestine, Anderson County 🏡</strong>
-            </p>
-            
-            <!-- Google Maps Embed -->
-            <div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto; border-radius: 20px; overflow: hidden; transition: all 0.5s ease;" id="mapContainer">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d435889.8842!2d-96.8!3d32.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDEyJzAwLjAiTiA5NsKwNDgnMDAuMCJX!5e0!3m2!1sen!2sus!4v1692000000000!5m2!1sen!2sus&maptype=terrain"
-                    width="100%" 
-                    height="400" 
-                    style="border:0; transition: filter 0.5s ease;" 
-                    id="mapFrame"
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-            
-            <div class="territory-stats">
-                <div class="stat-item">
-                    <div class="stat-number" id="stat1">5 🏘️</div>
-                    <div class="stat-label" id="stat1Label">Counties We<br>Sweeten</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="stat2">3 🎂</div>
-                    <div class="stat-label" id="stat2Label">Years of<br>Sweet Success</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="stat3">∞ 🍯</div>
-                    <div class="stat-label" id="stat3Label">Hexagonal<br>Hugs</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" id="stat4">💝</div>
-                    <div class="stat-label" id="stat4Label">Made with<br>Love</div>
-                </div>
             </div>
         </div>
     </section>
@@ -940,16 +806,6 @@
                 card2Text: "Every golden jar of our raw wildflower honey is a gift from nature! Harvested with love and respect using gentle, chemical-free methods that keep our buzzing friends happy. Spreading sweetness across Anderson, Dallas, Ellis, Henderson, and Navarro Counties!",
                 card3Title: "🌟 Bee Heroes",
                 card3Text: "Beyond honey magic, we're bee rescue heroes! When unwanted bee families need a new home in Ellis County, our caring team provides safe, gentle relocation services. Every bee deserves a happy ending and a chance to keep making the world sweeter!",
-                territoryTitle: "Where We Spread Sweetness 🗺️",
-                mapDescription: 'Our sweet home base: <strong style="color: #ff6f00;">Palestine, Anderson County 🏡</strong>',
-                stat1: "5 🏘️",
-                stat1Label: "Counties We<br>Sweeten",
-                stat2: "3 🎂",
-                stat2Label: "Years of<br>Sweet Success",
-                stat3: "∞ 🍯",
-                stat3Label: "Hexagonal<br>Hugs",
-                stat4: "💝",
-                stat4Label: "Made with<br>Love",
                 contactTitle: "Buzz Us! 📞",
                 contactLabel1: "🏡 SWEET HOME BASE:",
                 contactLabel2: "📧 SEND SWEET MESSAGES:",
@@ -973,16 +829,6 @@
                 card2Text: "Every jar of our raw wildflower honey is earned through sustainable, chemical-free methods. Harvested with respect for the ancient contract between beekeeper and bee, serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties.",
                 card3Title: "⚡ SPECIALIZED SERVICES",
                 card3Text: "Beyond honey production, we offer professional bee removal services throughout Ellis County. When unwanted hives need relocation, our experienced team ensures safe, humane removal while protecting these vital pollinators.",
-                territoryTitle: "AREA OF OPERATIONS",
-                mapDescription: 'Base operations: <strong style="color: #ff8f00;">Palestine, Anderson County</strong>',
-                stat1: "5",
-                stat1Label: "Counties<br>Covered",
-                stat2: "3",
-                stat2Label: "Years<br>Operational",
-                stat3: "∞",
-                stat3Label: "Hexagonal<br>Networks",
-                stat4: "24/7",
-                stat4Label: "Hive<br>Monitoring",
                 contactTitle: "MAKE CONTACT",
                 contactLabel1: "LOCATION:",
                 contactLabel2: "ENCRYPTED EMAIL:",
