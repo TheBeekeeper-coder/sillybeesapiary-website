@@ -62,20 +62,20 @@
     }  
 
     // Load Categories dynamically
-    async function loadCategories() {
-      const res = await fetch("/api/categories");
-      const data = await res.json();
-      console.log("Categories from proxy:", data); // Debugging
-      const select = document.getElementById("description");
-      data.categories.forEach(cat => {
-        const opt = document.createElement("option");
-        opt.value = cat;
-        opt.textContent = cat;
-        select.appendChild(opt);
-      });
-    } catch (err) {
-      console.error("Error loading categories:", err);
-    }
+   // async function loadCategories() {
+    //  const res = await fetch("/api/categories");
+    //  const data = await res.json();
+    //  console.log("Categories from proxy:", data); // Debugging
+    //  const select = document.getElementById("description");
+    //  data.categories.forEach(cat => {
+   //     const opt = document.createElement("option");
+   //     opt.value = cat;
+    //    opt.textContent = cat;
+    //    select.appendChild(opt);
+   //   });
+   // } catch (err) {
+   //   console.error("Error loading categories:", err);
+   // }
 
     // Handle form submission
     document.getElementById("flightForm").addEventListener("submit", async (e) => {
