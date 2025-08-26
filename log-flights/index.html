@@ -49,6 +49,7 @@
     async function loadPilots() {
       const res = await fetch("/api/get-pilots");
       const data = await res.json();
+      console.log("Pilots from proxy:", data); // Debugging
       const select = document.getElementById("renter");
       data.pilots.forEach(name => {
         const opt = document.createElement("option");
@@ -56,12 +57,15 @@
         opt.textContent = name;
         select.appendChild(opt);
       });
-    }
+    } catch(err){
+      console.error("Error loading pilots:", err);
+    }  
 
     // Load Categories dynamically
     async function loadCategories() {
       const res = await fetch("/api/get-categories");
       const data = await res.json();
+      console.log("Categories from proxy:", data); // Debugging
       const select = document.getElementById("description");
       data.categories.forEach(cat => {
         const opt = document.createElement("option");
@@ -69,6 +73,8 @@
         opt.textContent = cat;
         select.appendChild(opt);
       });
+    } catch (err) {
+      console.error("Error loading categories:", err);
     }
 
     // Handle form submission
