@@ -49,7 +49,6 @@
     async function loadPilots() {
       const res = await fetch("/api/pilots");
       const data = await res.json();
-      console.log("Pilots from proxy:", data); // Debugging
       const select = document.getElementById("renter");
       data.pilots.forEach(name => {
         const opt = document.createElement("option");
@@ -63,7 +62,6 @@
     async function loadCategories() {
       const res = await fetch("/api/categories");
       const data = await res.json();
-      console.log("Categories from proxy:", data); // Debugging
       const select = document.getElementById("description");
       data.categories.forEach(cat => {
         const opt = document.createElement("option");
