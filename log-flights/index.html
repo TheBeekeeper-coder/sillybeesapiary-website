@@ -57,9 +57,7 @@
         opt.textContent = name;
         select.appendChild(opt);
       });
-    } catch(err){
-      console.error("Error loading pilots:", err);
-    }  
+    }   
 
     // Load Categories dynamically
     async function loadCategories() {
@@ -73,23 +71,22 @@
         opt.textContent = cat;
         select.appendChild(opt);
       });
-    } catch (err) {
-      console.error("Error loading categories:", err);
-    }
-
+    } 
+/*
     // Handle form submission
-   // document.getElementById("flightForm").addEventListener("submit", async (e) => {
-   //   e.preventDefault();
-   //   const data = Object.fromEntries(new FormData(e.target).entries());
-   //   await fetch("https://YOUR_N8N_URL/webhook/add-flight", {
-   //     method: "POST",
-   //     headers: { "Content-Type": "application/json" },
-   //     body: JSON.stringify(data)
-   //   });
-   //   alert("Flight entry submitted!");
-   //   e.target.reset();
-   // });
-
+    document.getElementById("flightForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      await fetch("https://YOUR_N8N_URL/webhook/add-flight", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+      alert("Flight entry submitted!");
+      e.target.reset();
+    });
+*/
+    
     // Load dropdowns when page loads
     loadPilots();
     loadCategories();
