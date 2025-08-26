@@ -47,7 +47,7 @@
   <script>
     // Load Pilots dynamically
     async function loadPilots() {
-      const res = await fetch("https://thebeekeeper.app.n8n.cloud/webhook/get-pilots");
+      const res = await fetch("api/get-pilots");
       const data = await res.json();
       const select = document.getElementById("renter");
       data.pilots.forEach(name => {
@@ -60,7 +60,7 @@
 
     // Load Categories dynamically
     async function loadCategories() {
-      const res = await fetch("https://thebeekeeper.app.n8n.cloud/webhook/get-categories");
+      const res = await fetch("api/get-categories");
       const data = await res.json();
       const select = document.getElementById("description");
       data.categories.forEach(cat => {
