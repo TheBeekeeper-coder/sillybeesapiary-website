@@ -296,6 +296,93 @@
             0% { top: -4px; }
             100% { top: 100vh; }
         }
+
+        /* Glitch text effect for edgy theme */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes glitchColor {
+            0% { text-shadow: 2px 0 #ff0000, -2px 0 #00ffff; }
+            25% { text-shadow: -2px 0 #ff0000, 2px 0 #00ffff; }
+            50% { text-shadow: 2px 0 #00ffff, -2px 0 #ff0000; }
+            75% { text-shadow: -2px 0 #00ffff, 2px 0 #ff0000; }
+            100% { text-shadow: 2px 0 #ff0000, -2px 0 #00ffff; }
+        }
+
+        body.edgy h1:hover,
+        body.edgy h2:hover,
+        body.edgy h3:hover {
+            animation: glitch 0.3s ease infinite, glitchColor 0.3s ease infinite;
+        }
+
+        /* Typing animation for edgy tagline */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        body.edgy .tagline.typing-effect {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #ffc107;
+            width: 0;
+            animation: typing 2s steps(25, end) forwards, blink 0.7s step-end infinite;
+            display: inline-block;
+        }
+
+        /* Pulsing LIVE indicator */
+        .live-indicator {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background: #ff3333;
+            border-radius: 50%;
+            animation: livePulse 1.5s ease-in-out infinite;
+            box-shadow: 0 0 10px #ff3333;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px #ff3333; }
+            50% { opacity: 0.5; transform: scale(0.8); box-shadow: 0 0 5px #ff3333; }
+        }
+
+        body.edgy .live-indicator { display: inline-flex; }
+        body.whimsical .live-indicator { display: none; }
+
+        /* Hex grid background pattern */
+        .hex-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffc107' fill-opacity='0.05'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        body.edgy .hex-grid { opacity: 1; }
+        body.whimsical .hex-grid { opacity: 0; }
         
         /* Header */
         header {
@@ -791,6 +878,7 @@
     <!-- Edgy scanline effects -->
     <div class="scanline"></div>
     <div class="scan-beam"></div>
+    <div class="hex-grid"></div>
 
     <header>
         <nav>
@@ -899,8 +987,9 @@
                 contactLabel1: "LOCATION:",
                 contactLabel2: "ENCRYPTED EMAIL:",
                 contactLabel3: "SPECIALTIES:",
-                statusLabel: "STATUS:",
+                statusLabel: '<span class="live-indicator"><span class="live-dot"></span>LIVE</span> STATUS:',
                 statusUpdate: "Hive expansion in progress... More intel coming soon.",
+                useHtmlLabel: true,
                 footerText: `© ${new Date().getFullYear()} Silly Bees Apiary. The hive protects its own.`,
                 mapFilter: "filter: hue-rotate(30deg) contrast(1.1) brightness(0.8);",
                 mapBorder: "border: 2px solid rgba(255, 193, 7, 0.3); filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.2));"
@@ -974,9 +1063,22 @@
             if (statusUpdate) {
                 statusUpdate.style.color = theme === 'whimsical' ? '#ff6f00' : '#ffc107';
                 statusUpdate.style.borderLeft = theme === 'whimsical' ? '5px solid #ff6f00' : '3px solid rgba(255, 193, 7, 0.5)';
-                document.getElementById('statusLabel').textContent = content.statusLabel;
-                // Update the status text
+                // Update the status text with HTML for edgy LIVE indicator
                 statusUpdate.innerHTML = `<strong id="statusLabel">${content.statusLabel}</strong> ${content.statusUpdate}`;
+            }
+
+            // Handle typing animation for tagline in edgy mode
+            const tagline = document.getElementById('tagline');
+            if (tagline) {
+                if (theme === 'edgy') {
+                    tagline.classList.add('typing-effect');
+                    // Reset animation by removing and re-adding class
+                    tagline.style.animation = 'none';
+                    tagline.offsetHeight; // Trigger reflow
+                    tagline.style.animation = null;
+                } else {
+                    tagline.classList.remove('typing-effect');
+                }
             }
         }
 
