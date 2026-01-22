@@ -327,7 +327,8 @@
             to { width: 100%; }
         }
 
-        @keyframes blink {
+        @keyframes blinkCursor {
+            0%, 100% { border-color: #ffc107; }
             50% { border-color: transparent; }
         }
 
@@ -336,7 +337,7 @@
             white-space: nowrap;
             border-right: 3px solid #ffc107;
             width: 0;
-            animation: typing 2s steps(25, end) forwards, blink 0.7s step-end infinite;
+            animation: typing 4s steps(25, end) forwards, blinkCursor 0.7s step-end 6;
             display: inline-block;
         }
 
