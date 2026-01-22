@@ -58,12 +58,11 @@
   ],
   "areaServed": [
     "Anderson County, TX",
-    "Dallas County, TX", 
+    "Dallas County, TX",
     "Ellis County, TX",
     "Henderson County, TX",
     "Navarro County, TX"
   ]
-  // ... rest of your schema
 }
 </script>    
     <!-- Open Graph for Social Media -->
@@ -778,7 +777,7 @@
         <div class="grid">
             <div class="card">
                 <h3 id="card1Title">🐝 Happy Bee Families</h3>
-                <p id="card1Text">Located Based in Palestine, Texas and Midlothian, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!</p>
+                <p id="card1Text">Based in Palestine, Texas and Midlothian, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!</p>
             </div>
             <div class="card">
                 <h3 id="card2Title">🍯 Liquid Sunshine</h3>
@@ -810,7 +809,7 @@
     </section>
 
     <footer>
-        <p id="footerText">© 2025 Silly Bees Apiary 🐝 Spreading sweetness, one jar at a time! 🍯💕</p>
+        <p id="footerText">© <span id="currentYear"></span> Silly Bees Apiary 🐝 Spreading sweetness, one jar at a time! 🍯💕</p>
     </footer>
 
     <script>
@@ -951,12 +950,15 @@
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const elements = document.querySelectorAll('.floating-element, .hexagon');
-            
+
             elements.forEach((element, index) => {
                 const speed = 0.3 + (index * 0.1);
                 element.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
             });
         });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
