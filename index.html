@@ -201,26 +201,65 @@
         .floating-element:nth-child(5) { top: 60%; left: 5%; }
         .floating-element:nth-child(6) { top: 40%; right: 25%; }
 
-        /* Edgy hexagons */
+        /* Edgy hexagons - static grid with pulse */
         .hexagon {
-            position: absolute;
-            width: 120px;
-            height: 104px;
-            background: rgba(255, 193, 7, 0.08);
-            border: 2px solid rgba(255, 193, 7, 0.4);
+            position: fixed;
+            width: 80px;
+            height: 70px;
+            background: rgba(255, 193, 7, 0.03);
+            border: 1px solid rgba(255, 193, 7, 0.15);
             clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            animation: fall 8s linear infinite;
+            animation: hexPulse 4s ease-in-out infinite;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
 
-        .hexagon:nth-child(7) { left: 10%; animation-delay: 0s; }
-        .hexagon:nth-child(8) { right: 10%; animation-delay: 2s; }
-        .hexagon:nth-child(9) { left: 20%; animation-delay: 4s; }
-        .hexagon:nth-child(10) { right: 20%; animation-delay: 1s; }
-        .hexagon:nth-child(11) { left: 5%; animation-delay: 3s; }
-        .hexagon:nth-child(12) { right: 25%; animation-delay: 5s; }
-        .hexagon:nth-child(13) { right: 5%; animation-delay: 1.5s; }
+        .hexagon:nth-child(7) { top: 10%; left: 5%; animation-delay: 0s; }
+        .hexagon:nth-child(8) { top: 15%; right: 8%; animation-delay: 0.5s; }
+        .hexagon:nth-child(9) { top: 40%; left: 3%; animation-delay: 1s; }
+        .hexagon:nth-child(10) { top: 60%; right: 5%; animation-delay: 1.5s; }
+        .hexagon:nth-child(11) { bottom: 20%; left: 8%; animation-delay: 2s; }
+        .hexagon:nth-child(12) { bottom: 30%; right: 3%; animation-delay: 2.5s; }
+        .hexagon:nth-child(13) { top: 75%; left: 2%; animation-delay: 3s; }
+
+        /* Scanline overlay for tactical feel */
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.1) 2px,
+                rgba(0, 0, 0, 0.1) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .scan-beam {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.3), transparent);
+            animation: scanMove 8s linear infinite;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        body.edgy .scanline { opacity: 0.4; }
+        body.edgy .scan-beam { opacity: 1; }
+        body.whimsical .scanline { opacity: 0; }
+        body.whimsical .scan-beam { opacity: 0; }
         
         /* Show/hide elements based on theme */
         body.edgy .floating-element { opacity: 0; pointer-events: none; display: none; }
@@ -240,21 +279,22 @@
             50% { transform: translateY(-30px) rotate(10deg); opacity: 1; }
         }
 
-        @keyframes fall {
-            0% { 
-                transform: translateY(-150px) rotate(0deg); 
-                opacity: 0; 
+        @keyframes hexPulse {
+            0%, 100% {
+                border-color: rgba(255, 193, 7, 0.15);
+                background: rgba(255, 193, 7, 0.03);
+                box-shadow: none;
             }
-            10% { 
-                opacity: 1; 
+            50% {
+                border-color: rgba(255, 193, 7, 0.4);
+                background: rgba(255, 193, 7, 0.08);
+                box-shadow: 0 0 20px rgba(255, 193, 7, 0.2), inset 0 0 15px rgba(255, 193, 7, 0.1);
             }
-            90% { 
-            opacity: 1; 
-            }
-            100% { 
-                transform: translateY(100vh) rotate(360deg); 
-                opacity: 0; 
-            }
+        }
+
+        @keyframes scanMove {
+            0% { top: -4px; }
+            100% { top: 100vh; }
         }
         
         /* Header */
@@ -748,6 +788,10 @@
         <div class="hexagon"></div>
     </div>
 
+    <!-- Edgy scanline effects -->
+    <div class="scanline"></div>
+    <div class="scan-beam"></div>
+
     <header>
         <nav>
             <div class="logo" id="logo">🐝 SILLY BEES APIARY</div>
@@ -849,9 +893,9 @@
                 card1Text: "Based in Palestine, Texas and Midlothian, Texas, our bees are more than insects—they're a highly trained operation. Each hive houses 50,000+ workers producing the finest organic, raw wildflower honey in East Texas. Three years of family beekeeping expertise.",
                 card2Title: "🍯 LIQUID GOLD",
                 card2Text: "Every jar of our raw wildflower honey is earned through sustainable, chemical-free methods. Harvested with respect for the ancient contract between beekeeper and bee, serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties.",
-                card3Title: "⚡ SPECIALIZED SERVICES",
+                card3Title: "⚡ EXTRACTION PROTOCOL",
                 card3Text: "Beyond honey production, we offer professional bee removal services throughout Ellis County. When unwanted hives need relocation, our experienced team ensures safe, humane removal while protecting these vital pollinators.",
-                contactTitle: "MAKE CONTACT",
+                contactTitle: "SECURE CHANNEL",
                 contactLabel1: "LOCATION:",
                 contactLabel2: "ENCRYPTED EMAIL:",
                 contactLabel3: "SPECIALTIES:",
