@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Sills - Tubular Logistics Specialist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: #0a0a0f;
+            min-height: 100vh;
+        }
+
+        /* Animated grid background */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 140, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 140, 0, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Electric pulse animation */
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 140, 0, 0.6); }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { border-color: rgba(255, 140, 0, 0.3); }
+            50% { border-color: rgba(255, 140, 0, 0.8); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(135deg, rgba(10, 10, 15, 0.7) 0%, rgba(10, 10, 15, 0.5) 50%, rgba(10, 10, 15, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&h=900&fit=crop') center/cover;
+            filter: brightness(0.8);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to top, #0a0a0f 0%, transparent 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 40px 20px;
+            animation: slideUp 1s ease-out;
+        }
+
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .profile-ring {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid rgba(255, 140, 0, 0.5);
+            border-radius: 50%;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        .profile-ring-outer {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 1px solid rgba(255, 140, 0, 0.2);
+            border-radius: 50%;
+            animation: borderGlow 3s ease-in-out infinite 0.5s;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #0a0a0f;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+        }
+
+        .name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 140, 0, 0.5);
+        }
+
+        .tagline {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #ff8c00;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #aaa;
+            letter-spacing: 2px;
+        }
+
+        .availability-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 200, 83, 0.2) 0%, rgba(0, 150, 60, 0.2) 100%);
+            border: 1px solid rgba(0, 200, 83, 0.5);
+            color: #00c853;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px 20px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 140, 0, 0.05) 50%, transparent 100%);
+            border-top: 1px solid rgba(255, 140, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            animation: slideUp 1s ease-out;
+        }
+
+        .stat-number {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ff8c00;
+            line-height: 1;
+            text-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        /* Content Sections */
+        .content {
+            padding: 60px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .section-line {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff8c00, transparent);
+            margin: 0 auto;
+        }
+
+        /* Aircraft Cards */
+        .aircraft-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .aircraft-card {
+            position: relative;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 140, 0, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .aircraft-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 140, 0, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 140, 0, 0.2);
+        }
+
+        .aircraft-card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.4s ease;
+        }
+
+        .aircraft-card:hover .aircraft-card-bg {
+            transform: scale(1.1);
+        }
+
+        .aircraft-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(10, 10, 15, 0.95) 0%, rgba(10, 10, 15, 0.3) 100%);
+        }
+
+        .aircraft-card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px;
+            z-index: 1;
+        }
+
+        .aircraft-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            color: #ff8c00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .aircraft-card p {
+            font-size: 0.95rem;
+            color: #aaa;
+            line-height: 1.5;
+        }
+
+        .aircraft-badge {
+            display: inline-block;
+            background: rgba(255, 140, 0, 0.2);
+            border: 1px solid rgba(255, 140, 0, 0.4);
+            color: #ff8c00;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .aircraft-badge.aspirational {
+            background: rgba(138, 43, 226, 0.2);
+            border-color: rgba(138, 43, 226, 0.4);
+            color: #9370db;
+        }
+
+        /* Cessna 172 card */
+        .card-cessna .aircraft-card-bg {
+            background-image: url('https://images.unsplash.com/photo-1474302770737-173ee21bab63?w=800&h=600&fit=crop');
+        }
+
+        /* Beech Baron card */
+        .card-baron .aircraft-card-bg {
+            background-image: url('https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800&h=600&fit=crop');
+        }
+
+        /* PT-17 Stearman card */
+        .card-stearman .aircraft-card-bg {
+            background-image: url('https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=800&h=600&fit=crop');
+        }
+
+        /* B-24 card */
+        .card-b24 .aircraft-card-bg {
+            background-image: url('https://images.unsplash.com/photo-1569629743817-70d8db6c323b?w=800&h=600&fit=crop');
+        }
+
+        /* Specialties Grid */
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .specialty-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 140, 0, 0.1);
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .specialty-item:hover {
+            background: rgba(255, 140, 0, 0.05);
+            border-color: rgba(255, 140, 0, 0.3);
+            transform: translateX(10px);
+        }
+
+        .specialty-item h4 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: #ff8c00;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .specialty-item p {
+            font-size: 0.95rem;
+            color: #888;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+            border: 1px solid rgba(255, 140, 0, 0.2);
+            border-radius: 15px;
+            padding: 50px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 140, 0, 0.1);
+            border: 1px solid rgba(255, 140, 0, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover .contact-icon {
+            background: rgba(255, 140, 0, 0.2);
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+            transform: scale(1.1);
+        }
+
+        .contact-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .contact-value {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .contact-value a {
+            color: #ff8c00;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+        }
+
+        /* CTA Button */
+        .add-contact-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff8c00 0%, #cc7000 100%);
+            color: #0a0a0f;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 20px;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .add-contact-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.5);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #444;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .aircraft-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+
+            .tagline {
+                font-size: 1rem;
+                letter-spacing: 3px;
+            }
+
+            .stats-bar {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .aircraft-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .specialties-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 30px 20px;
+            }
+
+            .contact-grid {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="profile-container">
+                    <div class="profile-ring"></div>
+                    <div class="profile-ring-outer"></div>
+                    <img src="../images/kevin-sills.jpeg" alt="Kevin Sills" class="profile-img">
+                </div>
+                <h1 class="name">Kevin Sills</h1>
+                <div class="tagline">Tubular Logistics Specialist</div>
+                <p class="title">Private Pilot | Multi-Engine Rated</p>
+                <div class="availability-badge">Open to Opportunities</div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Years Flying</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Aircraft Types</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Dream Machine</div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Aircraft Section -->
+            <div class="section-header">
+                <h2 class="section-title">Aircraft Experience</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="aircraft-grid">
+                <div class="aircraft-card card-cessna">
+                    <div class="aircraft-card-bg"></div>
+                    <div class="aircraft-card-overlay"></div>
+                    <div class="aircraft-card-content">
+                        <h3>Cessna 172</h3>
+                        <p>The workhorse of general aviation. Reliable, forgiving, and the perfect platform for building hours and honing skills.</p>
+                        <span class="aircraft-badge">Single Engine</span>
+                    </div>
+                </div>
+
+                <div class="aircraft-card card-baron">
+                    <div class="aircraft-card-bg"></div>
+                    <div class="aircraft-card-overlay"></div>
+                    <div class="aircraft-card-content">
+                        <h3>Beech Baron</h3>
+                        <p>Twin-engine performance and capability. Handling complex systems and multi-engine operations with precision.</p>
+                        <span class="aircraft-badge">Multi-Engine</span>
+                    </div>
+                </div>
+
+                <div class="aircraft-card card-stearman">
+                    <div class="aircraft-card-bg"></div>
+                    <div class="aircraft-card-overlay"></div>
+                    <div class="aircraft-card-content">
+                        <h3>Boeing PT-17 Stearman</h3>
+                        <p>Classic biplane heritage. Experiencing aviation the way it was meant to be - open cockpit, stick and rudder flying.</p>
+                        <span class="aircraft-badge">Tailwheel</span>
+                    </div>
+                </div>
+
+                <div class="aircraft-card card-b24">
+                    <div class="aircraft-card-bg"></div>
+                    <div class="aircraft-card-overlay"></div>
+                    <div class="aircraft-card-content">
+                        <h3>B-24 Liberator</h3>
+                        <p>The ultimate dream - piloting a piece of history. Honoring the legacy of WWII aviators who flew these magnificent bombers.</p>
+                        <span class="aircraft-badge aspirational">Aspirational</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pilot Skills Section -->
+            <div class="section-header">
+                <h2 class="section-title">Pilot Skills</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="specialties-grid">
+                <div class="specialty-item">
+                    <h4>VFR Operations</h4>
+                    <p>Experienced in visual flight rules navigation, cross-country planning, and weather assessment</p>
+                </div>
+                <div class="specialty-item">
+                    <h4>Multi-Engine Operations</h4>
+                    <p>Trained in twin-engine aircraft systems, procedures, and emergency protocols</p>
+                </div>
+                <div class="specialty-item">
+                    <h4>Tailwheel Proficiency</h4>
+                    <p>Skilled in conventional gear aircraft requiring precise ground handling and coordination</p>
+                </div>
+                <div class="specialty-item">
+                    <h4>Cross-Country Navigation</h4>
+                    <p>Flight planning, fuel management, and efficient route optimization</p>
+                </div>
+                <div class="specialty-item">
+                    <h4>Aircraft Systems</h4>
+                    <p>Understanding of piston engines, electrical systems, and avionics operations</p>
+                </div>
+                <div class="specialty-item">
+                    <h4>Safety First</h4>
+                    <p>Committed to continuous learning, proficiency checks, and safe operational practices</p>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <div class="section-header">
+                    <h2 class="section-title">Connect</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">P</div>
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">
+                            <a href="tel:+12147696201">+1 (214) 769-6201</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">@</div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:t11270951@gmail.com">t11270951@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AKevin%20Sills%0AN%3ASills%3BKevin%3B%3B%3B%0ATITLE%3ATubular%20Logistics%20Specialist%0ATEL%3BTYPE%3DCELL%3A%2B1-214-769-6201%0AEMAIL%3BTYPE%3DPERSONAL%3At11270951%40gmail.com%0AURL%3Ahttps%3A//sillybeesapiary.com/pilot%0AEND%3AVCARD"
+                   class="add-contact-btn"
+                   download="Kevin_Sills_Pilot.vcf">
+                    Save Contact
+                </a>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>Clear Skies and Tailwinds</p>
+        </footer>
+    </div>
+</body>
+</html>
