@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Bees Apiary | Raw Texas Wildflower Honey</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍯</text></svg>">
+    <meta name="description" content="Silly Bees Apiary produces raw, unfiltered Texas wildflower honey. Hand bottled by the Sills family. Real honey from real hands.">
+    <meta name="keywords" content="raw honey Texas, wildflower honey, unfiltered honey, hand bottled honey, Texas apiary, Sills family honey">
+    <meta name="author" content="Silly Bees Apiary">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Silly Bees Apiary - Raw Texas Wildflower Honey">
+    <meta property="og:description" content="Raw, unfiltered, hand bottled honey from the Sills family apiary. Real honey from real hands.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sillybeesapiary.com">
+    <meta property="og:site_name" content="Silly Bees Apiary">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Silly Bees Apiary",
+      "description": "Raw, unfiltered Texas wildflower honey, hand bottled by the Sills family",
+      "url": "https://sillybeesapiary.com",
+      "telephone": "214-769-5511",
+      "email": "TheBeekeeper@sillybeesapiary.com"
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+        :root {
+            --cream: #faf6e9;
+            --cream-light: #fdfcf7;
+            --teal: #4a7c7c;
+            --teal-dark: #3d6868;
+            --teal-light: #5a9090;
+            --brown: #5d4c3a;
+            --brown-light: #7a6b58;
+            --gold: #c4a962;
+            --border: #d4cfc0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--cream-light);
+            color: var(--brown);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Subtle vertical stripe pattern like the label */
+        .stripe-bg {
+            background-image: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 8px,
+                rgba(212, 207, 192, 0.15) 8px,
+                rgba(212, 207, 192, 0.15) 9px
+            );
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--teal);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--teal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--teal-dark);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(250, 246, 233, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--teal);
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--brown);
+            letter-spacing: 0.03em;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--teal);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section - Layer 1: The Hook */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--teal);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: var(--brown-light);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-descriptors {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .descriptor {
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--teal);
+            position: relative;
+        }
+
+        .descriptor:not(:last-child)::after {
+            content: '•';
+            position: absolute;
+            right: -1.2rem;
+            color: var(--gold);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--teal);
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--teal-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(74, 124, 124, 0.3);
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--brown-light);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+        }
+
+        .scroll-hint::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 40px;
+            background: var(--border);
+            margin: 0.5rem auto 0;
+        }
+
+        /* Section base styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Layer 2: Education Section */
+        .education {
+            background: white;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .education-block h3 {
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+        }
+
+        .education-block p {
+            color: var(--brown);
+            line-height: 1.8;
+        }
+
+        .education-block ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .education-block li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--brown);
+        }
+
+        .education-block li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.1rem;
+            width: 6px;
+            height: 6px;
+            background: var(--teal);
+            border-radius: 50%;
+        }
+
+        /* Layer 3: Identity Section */
+        .identity {
+            background: var(--cream);
+        }
+
+        .identity-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .identity-text .name-reveal {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+        }
+
+        .identity-visual {
+            position: relative;
+            padding: 2rem;
+        }
+
+        .identity-badge {
+            background: var(--teal);
+            color: white;
+            padding: 3rem;
+            border-radius: 50%;
+            width: 280px;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .identity-badge .badge-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .identity-badge .badge-product {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .identity-badge .badge-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .identity-badge .badge-desc {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+
+        /* Scripture callout */
+        .scripture {
+            background: white;
+            border-left: 3px solid var(--teal);
+            padding: 2rem 2.5rem;
+            margin: 4rem auto;
+            max-width: 700px;
+        }
+
+        .scripture blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .scripture cite {
+            font-size: 0.9rem;
+            color: var(--teal);
+            font-style: normal;
+            letter-spacing: 0.05em;
+        }
+
+        /* Layer 4: Future Section */
+        .future {
+            background: white;
+            border-top: 1px solid var(--border);
+        }
+
+        .future-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .coming-soon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .coming-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .coming-item:hover {
+            border-color: var(--teal);
+            box-shadow: 0 4px 20px rgba(74, 124, 124, 0.1);
+        }
+
+        .coming-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+
+        .coming-item p {
+            font-size: 0.9rem;
+            color: var(--brown-light);
+            margin-bottom: 0;
+        }
+
+        .coming-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+
+        /* Lessons teaser */
+        .lessons-teaser {
+            background: var(--cream);
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+            border-radius: 3px;
+        }
+
+        .lessons-teaser p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--brown);
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .lessons-teaser a {
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--teal);
+            padding-bottom: 2px;
+        }
+
+        /* Layer 5: Contact/Action Section */
+        .contact {
+            background: var(--teal);
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-label {
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-value {
+            font-size: 1.1rem;
+        }
+
+        .contact-value a {
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .contact-value a:hover {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        .contact-cta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button-light {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--teal);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button-light:hover {
+            background: var(--cream);
+            color: var(--teal-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--teal-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0;
+        }
+
+        /* Botanical decoration element */
+        .botanical-divider {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .botanical-divider svg {
+            width: 60px;
+            height: 60px;
+            fill: var(--teal);
+            opacity: 0.3;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .identity-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .identity-visual {
+                order: -1;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .hero-descriptors {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .descriptor::after {
+                display: none;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .identity-badge {
+                width: 220px;
+                height: 220px;
+                padding: 2rem;
+            }
+
+            .identity-badge .badge-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Smooth fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="stripe-bg">
+    <header>
+        <nav>
+            <div class="logo">Silly Bees Apiary</div>
+            <ul class="nav-links">
+                <li><a href="#about">Our Honey</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Layer 1: The Hook -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Texas Wildflower Honey</span>
+            <h1>Silly Bees Apiary</h1>
+            <p class="hero-tagline">Real honey from real hands.</p>
+            <div class="hero-descriptors">
+                <span class="descriptor">Raw</span>
+                <span class="descriptor">Unfiltered</span>
+                <span class="descriptor">Hand Bottled</span>
+            </div>
+            <a href="#contact" class="cta-button">Shop Honey</a>
+        </div>
+        <div class="scroll-hint">Scroll</div>
+    </section>
+
+    <!-- Layer 2: The Education -->
+    <section class="education" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-subtitle">What Makes It Different</p>
+                <h2>Honey the Way Bees Make It</h2>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-block fade-in">
+                    <h3>Raw & Unfiltered</h3>
+                    <p>Most store-bought honey is heavily filtered and heated, removing the enzymes and beneficial properties that make honey valuable. Our honey is different.</p>
+                    <ul>
+                        <li>Never heated beyond natural hive temperatures</li>
+                        <li>Enzymes and beneficial properties intact</li>
+                        <li>Pollen retained for traceability and authenticity</li>
+                        <li>Exactly as the bees made it</li>
+                    </ul>
+                </div>
+
+                <div class="education-block fade-in">
+                    <h3>Texas Wildflowers</h3>
+                    <p>Our bees forage from whatever's blooming across Central and East Texas—wildflowers, trees, brush. They don't respect county lines, and that's a feature, not a bug.</p>
+                    <ul>
+                        <li>Nectar from thousands of regional flowers</li>
+                        <li>Exposure to diverse Texas pollen</li>
+                        <li>Flavor changes with the seasons</li>
+                        <li>Every batch reflects what nature provided</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="botanical-divider">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 C55 25, 70 25, 75 40 C80 55, 70 70, 50 90 C30 70, 20 55, 25 40 C30 25, 45 25, 50 10 Z" />
+                    <circle cx="50" cy="45" r="8" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layer 3: The Identity -->
+    <section class="identity" id="story">
+        <div class="section-container">
+            <div class="identity-content">
+                <div class="identity-text fade-in">
+                    <p class="section-subtitle">The Sills Family</p>
+                    <h2>Silly Isn't a Joke—It's Our Name</h2>
+                    <p class="name-reveal">"Silly Bees" comes from our family name: Sills.</p>
+                    <p>What sounds playful on the surface is rooted in family identity. We started keeping bees in 2022, learning the craft and falling in love with the process—from hive to home.</p>
+                    <p>We're not a factory. We're a family. Every jar is hand bottled by us, with care for the bees and respect for the craft.</p>
+                    <p>Our faith shapes how we work: with honesty, gratitude, and a belief that good things come from patient hands.</p>
+                </div>
+                <div class="identity-visual fade-in">
+                    <div class="identity-badge">
+                        <span class="badge-name">Silly Bees Apiary</span>
+                        <span class="badge-product">Texas</span>
+                        <span class="badge-title">HONEY</span>
+                        <span class="badge-desc">Raw • Unfiltered • Hand Bottled</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scripture fade-in">
+                <blockquote>"Your words are like honey on my lips."</blockquote>
+                <cite>Psalm 119:103</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layer 4: The Future -->
+    <section class="future">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-subtitle">What's Coming</p>
+                <h2>More From the Hive</h2>
+            </div>
+
+            <div class="future-intro fade-in">
+                <p>We're building more than a honey brand. We're building an artisan pantry—honest products, handmade with care.</p>
+            </div>
+
+            <div class="coming-soon-grid">
+                <div class="coming-item fade-in">
+                    <h4>Hot Honey</h4>
+                    <p>Heat meets sweet</p>
+                    <span class="coming-badge">Coming Soon</span>
+                </div>
+                <div class="coming-item fade-in">
+                    <h4>Infused Varieties</h4>
+                    <p>Flavored honey blends</p>
+                    <span class="coming-badge">Coming Soon</span>
+                </div>
+                <div class="coming-item fade-in">
+                    <h4>Vanilla Extract</h4>
+                    <p>Homemade, aged</p>
+                    <span class="coming-badge">Coming Soon</span>
+                </div>
+            </div>
+
+            <div class="lessons-teaser fade-in">
+                <p>"The hive has a lot to teach—about work, family, and provision."</p>
+                <a href="#">Life Lessons from the Bees</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layer 5: The Action -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Contact</h3>
+                    <div class="contact-item">
+                        <p class="contact-label">Email</p>
+                        <p class="contact-value"><a href="mailto:TheBeekeeper@sillybeesapiary.com">TheBeekeeper@sillybeesapiary.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <p class="contact-label">Website</p>
+                        <p class="contact-value"><a href="https://sillybeesapiary.com">sillybeesapiary.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <p class="contact-label">Region</p>
+                        <p class="contact-value">Central & East Texas</p>
+                    </div>
+                </div>
+
+                <div class="contact-cta fade-in">
+                    <p>Ready to taste the difference real honey makes?</p>
+                    <a href="mailto:TheBeekeeper@sillybeesapiary.com" class="cta-button-light">Order Honey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Silly Bees Apiary. Hand bottled by the Sills family.</p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
