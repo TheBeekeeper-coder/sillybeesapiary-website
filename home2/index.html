@@ -554,31 +554,40 @@
         .contact {
             background: var(--teal);
             color: white;
+            padding: 3rem 2rem;
+        }
+
+        .contact .section-header {
+            margin-bottom: 1.5rem;
         }
 
         .contact h2 {
             color: white;
+            font-size: 2rem;
+            margin-bottom: 0;
         }
 
         .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
         }
 
-        .contact-info h3 {
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .contact-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
 
         .contact-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             opacity: 0.7;
@@ -586,7 +595,7 @@
         }
 
         .contact-value {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         .contact-value a {
@@ -601,27 +610,27 @@
 
         .contact-cta {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
+            align-items: center;
+            gap: 1.5rem;
         }
 
         .contact-cta p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            font-size: 1rem;
+            margin-bottom: 0;
             opacity: 0.9;
         }
 
         .cta-button-light {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: 0.75rem 2rem;
             background: white;
             color: var(--teal);
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 500;
             letter-spacing: 0.05em;
             border-radius: 3px;
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .cta-button-light:hover {
@@ -656,8 +665,12 @@
             }
 
             .contact-grid {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 text-align: center;
+            }
+
+            .contact-cta {
+                flex-direction: column;
             }
         }
 
@@ -904,13 +917,10 @@
                         <p class="contact-label">Region</p>
                         <p class="contact-value">North & East Texas</p>
                     </div>
-                    <div class="contact-item">
-                        <p class="contact-value" style="opacity: 0.9; font-style: italic;">We sell direct — reach out to order, ask questions, or just say hello.</p>
-                    </div>
                 </div>
 
                 <div class="contact-cta fade-in">
-                    <p>Ready to taste the difference?</p>
+                    <p>We sell direct.</p>
                     <a href="mailto:TheBeekeeper@sillybeesapiary.com" class="cta-button-light">Order Honey</a>
                 </div>
             </div>
