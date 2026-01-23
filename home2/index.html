@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silly Bees Apiary | Raw Texas Wildflower Honey</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍯</text></svg>">
-    <meta name="description" content="Silly Bees Apiary produces raw, unfiltered Texas wildflower honey. Hand bottled by the Sills family. Real honey from real hands.">
+    <meta name="description" content="Silly Bees Apiary produces raw, unfiltered Texas wildflower honey. Hand bottled by the Sills family. From our hive to your home.">
     <meta name="keywords" content="raw honey Texas, wildflower honey, unfiltered honey, hand bottled honey, Texas apiary, Sills family honey">
     <meta name="author" content="Silly Bees Apiary">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph for Social Media -->
     <meta property="og:title" content="Silly Bees Apiary - Raw Texas Wildflower Honey">
-    <meta property="og:description" content="Raw, unfiltered, hand bottled honey from the Sills family apiary. Real honey from real hands.">
+    <meta property="og:description" content="Raw, unfiltered, hand bottled honey from the Sills family apiary. From our hive to your home.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sillybeesapiary.com">
     <meta property="og:site_name" content="Silly Bees Apiary">
@@ -25,7 +25,6 @@
       "name": "Silly Bees Apiary",
       "description": "Raw, unfiltered Texas wildflower honey, hand bottled by the Sills family",
       "url": "https://sillybeesapiary.com",
-      "telephone": "214-769-5511",
       "email": "TheBeekeeper@sillybeesapiary.com"
     }
     </script>
@@ -168,7 +167,7 @@
             width: 100%;
         }
 
-        /* Hero Section - Layer 1: The Hook */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -183,18 +182,6 @@
             max-width: 800px;
         }
 
-        .hero-badge {
-            display: inline-block;
-            padding: 0.5rem 1.5rem;
-            border: 1px solid var(--teal);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--teal);
-            margin-bottom: 2rem;
-        }
-
         .hero h1 {
             margin-bottom: 1.5rem;
         }
@@ -202,31 +189,16 @@
         .hero-tagline {
             font-size: 1.4rem;
             color: var(--brown-light);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-weight: 300;
+            letter-spacing: 0.05em;
         }
 
-        .hero-descriptors {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .descriptor {
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--teal);
-            position: relative;
-        }
-
-        .descriptor:not(:last-child)::after {
-            content: '•';
-            position: absolute;
-            right: -1.2rem;
-            color: var(--gold);
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--brown);
+            margin-bottom: 2.5rem;
+            font-style: italic;
         }
 
         .cta-button {
@@ -291,69 +263,64 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Layer 2: Education Section */
-        .education {
+        /* The Honey Section */
+        .honey-section {
             background: white;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
 
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 4rem;
-            margin-top: 3rem;
+        .honey-content {
+            max-width: 750px;
+            margin: 0 auto;
         }
 
-        .education-block h3 {
-            color: var(--teal);
+        .honey-content p {
+            color: var(--brown);
+            line-height: 1.9;
             margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid var(--gold);
-            display: inline-block;
         }
 
-        .education-block p {
-            color: var(--brown);
-            line-height: 1.8;
+        .honey-content p.emphasis {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--teal);
+            margin: 2rem 0;
         }
 
-        .education-block ul {
-            list-style: none;
-            margin-top: 1.5rem;
+        .honey-content p.closing {
+            font-weight: 500;
+            color: var(--teal-dark);
+            margin-top: 2rem;
         }
 
-        .education-block li {
-            padding: 0.75rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--brown);
+        /* Botanical decoration element */
+        .botanical-divider {
+            text-align: center;
+            margin: 3rem 0;
         }
 
-        .education-block li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 1.1rem;
-            width: 6px;
-            height: 6px;
-            background: var(--teal);
-            border-radius: 50%;
+        .botanical-divider svg {
+            width: 60px;
+            height: 60px;
+            fill: var(--teal);
+            opacity: 0.3;
         }
 
-        /* Layer 3: Identity Section */
-        .identity {
+        /* The Family Section */
+        .family-section {
             background: var(--cream);
         }
 
-        .identity-content {
+        .family-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .identity-text .name-reveal {
+        .family-text .name-reveal {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.3rem;
             font-style: italic;
@@ -361,12 +328,16 @@
             margin-bottom: 1.5rem;
         }
 
-        .identity-visual {
+        .family-text p {
+            line-height: 1.9;
+        }
+
+        .family-visual {
             position: relative;
             padding: 2rem;
         }
 
-        .identity-badge {
+        .family-badge {
             background: var(--teal);
             color: white;
             padding: 3rem;
@@ -381,7 +352,7 @@
             margin: 0 auto;
         }
 
-        .identity-badge .badge-name {
+        .family-badge .badge-name {
             font-family: 'Cormorant Garamond', serif;
             font-size: 0.9rem;
             letter-spacing: 0.2em;
@@ -389,25 +360,134 @@
             margin-bottom: 0.5rem;
         }
 
-        .identity-badge .badge-product {
+        .family-badge .badge-product {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2rem;
             font-style: italic;
             margin-bottom: 0.5rem;
         }
 
-        .identity-badge .badge-title {
+        .family-badge .badge-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
             font-weight: 600;
             letter-spacing: 0.05em;
         }
 
-        .identity-badge .badge-desc {
+        .family-badge .badge-desc {
             font-size: 0.75rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
             margin-top: 1rem;
+        }
+
+        /* What's Coming Section */
+        .coming-section {
+            background: white;
+            border-top: 1px solid var(--border);
+        }
+
+        .coming-intro {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 3rem;
+        }
+
+        .coming-intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .coming-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .coming-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .coming-item:hover {
+            border-color: var(--teal);
+            box-shadow: 0 4px 20px rgba(74, 124, 124, 0.1);
+        }
+
+        .coming-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            color: var(--teal);
+            margin-bottom: 0.75rem;
+        }
+
+        .coming-item p {
+            font-size: 0.95rem;
+            color: var(--brown);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .coming-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+
+        .coming-closing {
+            text-align: center;
+            margin-top: 3rem;
+            font-style: italic;
+            color: var(--brown-light);
+        }
+
+        /* Life Lessons Section */
+        .lessons-section {
+            background: var(--cream);
+            border-top: 1px solid var(--border);
+        }
+
+        .lessons-content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .lessons-content p {
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .lessons-values {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lesson-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--teal);
+            letter-spacing: 0.05em;
+        }
+
+        .lessons-closing {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--teal);
+            text-align: center;
+            margin-top: 2rem;
         }
 
         /* Scripture callout */
@@ -434,87 +514,7 @@
             letter-spacing: 0.05em;
         }
 
-        /* Layer 4: Future Section */
-        .future {
-            background: white;
-            border-top: 1px solid var(--border);
-        }
-
-        .future-intro {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-        }
-
-        .coming-soon-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .coming-item {
-            text-align: center;
-            padding: 2rem 1.5rem;
-            border: 1px solid var(--border);
-            border-radius: 3px;
-            transition: all 0.3s ease;
-        }
-
-        .coming-item:hover {
-            border-color: var(--teal);
-            box-shadow: 0 4px 20px rgba(74, 124, 124, 0.1);
-        }
-
-        .coming-item h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            color: var(--teal);
-            margin-bottom: 0.5rem;
-        }
-
-        .coming-item p {
-            font-size: 0.9rem;
-            color: var(--brown-light);
-            margin-bottom: 0;
-        }
-
-        .coming-badge {
-            display: inline-block;
-            font-size: 0.7rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-top: 1rem;
-        }
-
-        /* Lessons teaser */
-        .lessons-teaser {
-            background: var(--cream);
-            text-align: center;
-            padding: 4rem 2rem;
-            margin-top: 4rem;
-            border-radius: 3px;
-        }
-
-        .lessons-teaser p {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--brown);
-            max-width: 500px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .lessons-teaser a {
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            border-bottom: 1px solid var(--teal);
-            padding-bottom: 2px;
-        }
-
-        /* Layer 5: Contact/Action Section */
+        /* Contact Section */
         .contact {
             background: var(--teal);
             color: white;
@@ -608,27 +608,14 @@
             margin-bottom: 0;
         }
 
-        /* Botanical decoration element */
-        .botanical-divider {
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .botanical-divider svg {
-            width: 60px;
-            height: 60px;
-            fill: var(--teal);
-            opacity: 0.3;
-        }
-
         /* Responsive */
         @media (max-width: 900px) {
-            .identity-content {
+            .family-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .identity-visual {
+            .family-visual {
                 order: -1;
             }
 
@@ -655,31 +642,23 @@
                 padding: 6rem 1.5rem 3rem;
             }
 
-            .hero-descriptors {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            .descriptor::after {
-                display: none;
-            }
-
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
-
             section {
                 padding: 4rem 1.5rem;
             }
 
-            .identity-badge {
+            .family-badge {
                 width: 220px;
                 height: 220px;
                 padding: 2rem;
             }
 
-            .identity-badge .badge-title {
+            .family-badge .badge-title {
                 font-size: 2rem;
+            }
+
+            .lessons-values {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
 
@@ -701,59 +680,45 @@
         <nav>
             <div class="logo">Silly Bees Apiary</div>
             <ul class="nav-links">
-                <li><a href="#about">Our Honey</a></li>
-                <li><a href="#story">Our Story</a></li>
+                <li><a href="#honey">The Honey</a></li>
+                <li><a href="#family">The Family</a></li>
+                <li><a href="#coming">What's Coming</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Layer 1: The Hook -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <span class="hero-badge">Texas Wildflower Honey</span>
             <h1>Silly Bees Apiary</h1>
-            <p class="hero-tagline">Real honey from real hands.</p>
-            <div class="hero-descriptors">
-                <span class="descriptor">Raw</span>
-                <span class="descriptor">Unfiltered</span>
-                <span class="descriptor">Hand Bottled</span>
-            </div>
+            <p class="hero-tagline">Raw. Unfiltered. Hand Bottled.</p>
+            <p class="hero-subtitle">Texas wildflower honey from a family apiary.</p>
             <a href="#contact" class="cta-button">Shop Honey</a>
         </div>
         <div class="scroll-hint">Scroll</div>
     </section>
 
-    <!-- Layer 2: The Education -->
-    <section class="education" id="about">
+    <!-- The Honey Section -->
+    <section class="honey-section" id="honey">
         <div class="section-container">
             <div class="section-header">
                 <p class="section-subtitle">What Makes It Different</p>
-                <h2>Honey the Way Bees Make It</h2>
+                <h2>The Honey</h2>
             </div>
 
-            <div class="education-grid">
-                <div class="education-block fade-in">
-                    <h3>Raw & Unfiltered</h3>
-                    <p>Most store-bought honey is heavily filtered and heated, removing the enzymes and beneficial properties that make honey valuable. Our honey is different.</p>
-                    <ul>
-                        <li>Never heated beyond natural hive temperatures</li>
-                        <li>Enzymes and beneficial properties intact</li>
-                        <li>Pollen retained for traceability and authenticity</li>
-                        <li>Exactly as the bees made it</li>
-                    </ul>
-                </div>
+            <div class="honey-content fade-in">
+                <p>Most honey on store shelves has been heated and filtered until there's nothing left but sweetness. The enzymes are gone. The pollen is gone. The identity is gone.</p>
 
-                <div class="education-block fade-in">
-                    <h3>Texas Wildflowers</h3>
-                    <p>Our bees forage from whatever's blooming across Central and East Texas—wildflowers, trees, brush. They don't respect county lines, and that's a feature, not a bug.</p>
-                    <ul>
-                        <li>Nectar from thousands of regional flowers</li>
-                        <li>Exposure to diverse Texas pollen</li>
-                        <li>Flavor changes with the seasons</li>
-                        <li>Every batch reflects what nature provided</li>
-                    </ul>
-                </div>
+                <p class="emphasis">Ours isn't like that.</p>
+
+                <p>We bottle our honey raw and unfiltered — exactly as the bees made it. The enzymes stay intact. The pollen stays in. You can taste the difference, and if you looked at it under a microscope, you'd know exactly where it came from.</p>
+
+                <p>Our bees forage across Central and East Texas, gathering nectar from whatever's blooming — wildflowers, trees, brush. They fly for miles, crossing county lines, chasing the bloom. A single jar holds nectar from thousands of flowers.</p>
+
+                <p>That's why the flavor shifts with the seasons. A spring harvest tastes different than a fall harvest. That's not inconsistency — that's real honey doing what real honey does.</p>
+
+                <p class="closing">From our hive to your home. Nothing added. Nothing hidden.</p>
             </div>
 
             <div class="botanical-divider">
@@ -765,20 +730,21 @@
         </div>
     </section>
 
-    <!-- Layer 3: The Identity -->
-    <section class="identity" id="story">
+    <!-- The Family Section -->
+    <section class="family-section" id="family">
         <div class="section-container">
-            <div class="identity-content">
-                <div class="identity-text fade-in">
-                    <p class="section-subtitle">The Sills Family</p>
-                    <h2>Silly Isn't a Joke—It's Our Name</h2>
-                    <p class="name-reveal">"Silly Bees" comes from our family name: Sills.</p>
-                    <p>What sounds playful on the surface is rooted in family identity. We started keeping bees in 2022, learning the craft and falling in love with the process—from hive to home.</p>
-                    <p>We're not a factory. We're a family. Every jar is hand bottled by us, with care for the bees and respect for the craft.</p>
-                    <p>Our faith shapes how we work: with honesty, gratitude, and a belief that good things come from patient hands.</p>
+            <div class="family-content">
+                <div class="family-text fade-in">
+                    <p class="section-subtitle">Who We Are</p>
+                    <h2>The Family</h2>
+                    <p class="name-reveal">Silly isn't a joke. It's our name.</p>
+                    <p>"Silly Bees" comes from Sills — our family name. What sounds playful is actually personal.</p>
+                    <p>We started keeping bees in 2022. What began as curiosity became craft. We learned from the bees, made our mistakes, and fell in love with the process — the inspections, the harvests, the rhythm of the seasons.</p>
+                    <p>We're not a factory. We're a family. Every jar is bottled by our hands, labeled at our table, and sent out with care.</p>
+                    <p>Our faith shapes how we work. We believe in honesty, patience, and gratitude for what the land provides. The bees remind us daily that good things take time and that everyone has a role to play.</p>
                 </div>
-                <div class="identity-visual fade-in">
-                    <div class="identity-badge">
+                <div class="family-visual fade-in">
+                    <div class="family-badge">
                         <span class="badge-name">Silly Bees Apiary</span>
                         <span class="badge-product">Texas</span>
                         <span class="badge-title">HONEY</span>
@@ -786,77 +752,104 @@
                     </div>
                 </div>
             </div>
-
-            <div class="scripture fade-in">
-                <blockquote>"Your words are like honey on my lips."</blockquote>
-                <cite>Psalm 119:103</cite>
-            </div>
         </div>
     </section>
 
-    <!-- Layer 4: The Future -->
-    <section class="future">
+    <!-- What's Coming Section -->
+    <section class="coming-section" id="coming">
         <div class="section-container">
             <div class="section-header">
-                <p class="section-subtitle">What's Coming</p>
-                <h2>More From the Hive</h2>
+                <p class="section-subtitle">The Future</p>
+                <h2>What's Coming</h2>
             </div>
 
-            <div class="future-intro fade-in">
-                <p>We're building more than a honey brand. We're building an artisan pantry—honest products, handmade with care.</p>
+            <div class="coming-intro fade-in">
+                <p>Honey is just the beginning.</p>
+                <p>We're building an artisan pantry — small-batch, handmade, rooted in the same care we put into every jar of honey.</p>
             </div>
 
-            <div class="coming-soon-grid">
+            <div class="coming-grid">
                 <div class="coming-item fade-in">
                     <h4>Hot Honey</h4>
-                    <p>Heat meets sweet</p>
+                    <p>Texas wildflower honey with heat. Sweet first, then a slow burn.</p>
                     <span class="coming-badge">Coming Soon</span>
                 </div>
                 <div class="coming-item fade-in">
                     <h4>Infused Varieties</h4>
-                    <p>Flavored honey blends</p>
+                    <p>Honey blended with natural flavors. More to come as we experiment.</p>
                     <span class="coming-badge">Coming Soon</span>
                 </div>
                 <div class="coming-item fade-in">
                     <h4>Vanilla Extract</h4>
-                    <p>Homemade, aged</p>
+                    <p>Homemade and aged. Real vanilla beans, real time, no shortcuts.</p>
                     <span class="coming-badge">Coming Soon</span>
                 </div>
             </div>
 
-            <div class="lessons-teaser fade-in">
-                <p>"The hive has a lot to teach—about work, family, and provision."</p>
-                <a href="#">Life Lessons from the Bees</a>
+            <p class="coming-closing fade-in">We'll share more when they're ready. Good things take time.</p>
+        </div>
+    </section>
+
+    <!-- Life Lessons Section -->
+    <section class="lessons-section" id="lessons">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-subtitle">From the Hive</p>
+                <h2>Life Lessons from the Bees</h2>
+            </div>
+
+            <div class="lessons-content fade-in">
+                <p>We've learned a lot from the hive.</p>
+
+                <p>Bees work together — every single one contributing to something larger than itself. A hive isn't a collection of individuals; it's a family with a shared purpose.</p>
+
+                <p>A bee's role changes over her lifetime. She starts as a nurse, tending to the young. Then she builds comb, guards the entrance, and finally forages in the field. She serves where she's needed, when she's needed.</p>
+
+                <p>The queen is cared for and provided for — not because she demands it, but because the hive knows her role matters. There's no resentment, just provision.</p>
+
+                <p>And when the hive grows too crowded, they don't fight for space. They make plans. They raise a new queen. They split — one family becoming two, both stronger for it.</p>
+
+                <div class="lessons-values">
+                    <span class="lesson-value">Work.</span>
+                    <span class="lesson-value">Service.</span>
+                    <span class="lesson-value">Provision.</span>
+                    <span class="lesson-value">Growth.</span>
+                </div>
+
+                <p class="lessons-closing">The hive has a lot to teach.</p>
+            </div>
+
+            <div class="scripture fade-in">
+                <blockquote>"Your words are like honey on my lips."</blockquote>
+                <cite>— Psalm 119:103</cite>
             </div>
         </div>
     </section>
 
-    <!-- Layer 5: The Action -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="section-container">
             <div class="section-header">
-                <h2>Get in Touch</h2>
+                <h2>Contact</h2>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-info fade-in">
-                    <h3>Contact</h3>
                     <div class="contact-item">
                         <p class="contact-label">Email</p>
                         <p class="contact-value"><a href="mailto:TheBeekeeper@sillybeesapiary.com">TheBeekeeper@sillybeesapiary.com</a></p>
                     </div>
                     <div class="contact-item">
-                        <p class="contact-label">Website</p>
-                        <p class="contact-value"><a href="https://sillybeesapiary.com">sillybeesapiary.com</a></p>
-                    </div>
-                    <div class="contact-item">
                         <p class="contact-label">Region</p>
                         <p class="contact-value">Central & East Texas</p>
+                    </div>
+                    <div class="contact-item">
+                        <p class="contact-value" style="opacity: 0.9; font-style: italic;">We sell direct — reach out to order, ask questions, or just say hello.</p>
                     </div>
                 </div>
 
                 <div class="contact-cta fade-in">
-                    <p>Ready to taste the difference real honey makes?</p>
+                    <p>Ready to taste the difference?</p>
                     <a href="mailto:TheBeekeeper@sillybeesapiary.com" class="cta-button-light">Order Honey</a>
                 </div>
             </div>
@@ -864,13 +857,11 @@
     </section>
 
     <footer>
-        <p>&copy; <span id="year"></span> Silly Bees Apiary. Hand bottled by the Sills family.</p>
+        <p>&copy; Silly Bees Apiary</p>
+        <p>Hand bottled by the Sills family.</p>
     </footer>
 
     <script>
-        // Set current year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
         // Fade-in animation on scroll
         const observerOptions = {
             threshold: 0.1,
