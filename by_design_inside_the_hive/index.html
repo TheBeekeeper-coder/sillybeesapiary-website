@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Design: Inside the Hive | Silly Bees Apiary</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍯</text></svg>">
+    <meta name="description" content="Life lessons from the beehive. Discover what bees teach us about work, service, provision, and growth.">
+    <meta name="keywords" content="beehive lessons, bees, honey, faith, work, service, provision, growth">
+    <meta name="author" content="Silly Bees Apiary">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="By Design: Inside the Hive | Silly Bees Apiary">
+    <meta property="og:description" content="Life lessons from the beehive. Discover what bees teach us about work, service, provision, and growth.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sillybeesapiary.com/by_design_inside_the_hive">
+    <meta property="og:site_name" content="Silly Bees Apiary">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+        :root {
+            --cream: #faf6e9;
+            --cream-light: #fdfcf7;
+            --teal: #4a7c7c;
+            --teal-dark: #3d6868;
+            --teal-light: #5a9090;
+            --brown: #5d4c3a;
+            --brown-light: #7a6b58;
+            --gold: #c4a962;
+            --border: #d4cfc0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--cream-light);
+            color: var(--brown);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Subtle vertical stripe pattern like the label */
+        .stripe-bg {
+            background-image: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 8px,
+                rgba(212, 207, 192, 0.15) 8px,
+                rgba(212, 207, 192, 0.15) 9px
+            );
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--teal);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--teal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--teal-dark);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(250, 246, 233, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--teal);
+            letter-spacing: 0.05em;
+        }
+
+        .logo a {
+            color: inherit;
+        }
+
+        .back-link {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--brown);
+            letter-spacing: 0.03em;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: var(--cream);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: var(--brown-light);
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--brown);
+            font-style: italic;
+        }
+
+        /* Section base styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Life Lessons Section */
+        .lessons-section {
+            background: white;
+            border-top: 1px solid var(--border);
+        }
+
+        .lessons-content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .lessons-content p {
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .lessons-values {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .lesson-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--teal);
+            letter-spacing: 0.05em;
+        }
+
+        .lessons-closing {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--teal);
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* Scripture callout */
+        .scripture {
+            background: var(--cream);
+            border-left: 3px solid var(--teal);
+            padding: 2rem 2.5rem;
+            margin: 4rem auto;
+            max-width: 700px;
+        }
+
+        .scripture blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--brown);
+            margin-bottom: 0.5rem;
+        }
+
+        .scripture cite {
+            font-size: 0.9rem;
+            color: var(--teal);
+            font-style: normal;
+            letter-spacing: 0.05em;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--cream);
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--teal);
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--teal-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(74, 124, 124, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--teal-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .lessons-values {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Smooth fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="stripe-bg">
+    <header>
+        <nav>
+            <div class="logo"><a href="/home2/">Silly Bees Apiary</a></div>
+            <a href="/home2/" class="back-link">Back to Home</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-tagline">From the Hive</p>
+            <h1>By Design: Inside the Hive</h1>
+            <p class="hero-subtitle">Life lessons from watching the bees.</p>
+        </div>
+    </section>
+
+    <!-- Life Lessons Section -->
+    <section class="lessons-section">
+        <div class="section-container">
+            <div class="lessons-content fade-in">
+                <p>We've learned a lot from the hive.</p>
+
+                <p>Bees work together. Every single one contributes to something larger than herself. A hive isn't a collection of individuals doing their own thing — it's a family with a shared purpose.</p>
+
+                <p>A bee's role changes over her lifetime. She starts as a nurse, caring for the young. Then she builds comb, guards the entrance, and finally forages in the fields. She serves where she's needed, when she's needed.</p>
+
+                <p>The queen is cared for and provided for — not because she demands it, but because the hive knows her role matters. There's no resentment. Just provision.</p>
+
+                <p>And when the hive grows too full, they don't fight for space. They plan. They raise a new queen. They split — one family becoming two, both stronger for it.</p>
+
+                <div class="lessons-values">
+                    <span class="lesson-value">Work.</span>
+                    <span class="lesson-value">Service.</span>
+                    <span class="lesson-value">Provision.</span>
+                    <span class="lesson-value">Growth.</span>
+                </div>
+
+                <p class="lessons-closing">The hive has a lot to teach.</p>
+            </div>
+
+            <div class="scripture fade-in">
+                <blockquote>"Your words are like honey on my lips."</blockquote>
+                <cite>— Psalm 119:103</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container fade-in">
+            <p>Taste the honey that comes from hives like these.</p>
+            <a href="/home2/#contact" class="cta-button">Shop Honey</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Silly Bees Apiary</p>
+        <p>Hand bottled by the Sills family.</p>
+    </footer>
+
+    <script>
+        // Auto-update footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
