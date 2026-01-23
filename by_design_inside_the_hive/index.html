@@ -267,93 +267,35 @@
             letter-spacing: 0.05em;
         }
 
-        /* Contact Section */
-        .contact {
+        /* CTA Section */
+        .cta-section {
+            background: var(--cream);
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
             background: var(--teal);
             color: white;
-            padding: 3rem 2rem;
-        }
-
-        .contact .section-header {
-            margin-bottom: 1.5rem;
-        }
-
-        .contact h2 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 0;
-        }
-
-        .contact-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .contact-item {
-            margin-bottom: 0;
-        }
-
-        .contact-label {
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            opacity: 0.7;
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-value {
             font-size: 1rem;
-        }
-
-        .contact-value a {
-            color: white;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-        }
-
-        .contact-value a:hover {
-            color: white;
-            border-bottom-color: white;
-        }
-
-        .contact-cta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .contact-cta p {
-            font-size: 1rem;
-            margin-bottom: 0;
-            opacity: 0.9;
-        }
-
-        .cta-button-light {
-            display: inline-block;
-            padding: 0.75rem 2rem;
-            background: white;
-            color: var(--teal);
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-weight: 400;
             letter-spacing: 0.05em;
             border-radius: 3px;
             transition: all 0.3s ease;
-            white-space: nowrap;
         }
 
-        .cta-button-light:hover {
-            background: var(--cream);
-            color: var(--teal-dark);
+        .cta-button:hover {
+            background: var(--teal-dark);
+            color: white;
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(74, 124, 124, 0.3);
         }
 
         /* Footer */
@@ -391,15 +333,6 @@
             .lessons-values {
                 flex-direction: column;
                 gap: 1rem;
-            }
-
-            .contact-grid {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .contact-cta {
-                flex-direction: column;
             }
         }
 
@@ -464,30 +397,11 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>Contact</h2>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info fade-in">
-                    <div class="contact-item">
-                        <p class="contact-label">Email</p>
-                        <p class="contact-value"><a href="mailto:TheBeekeeper@sillybeesapiary.com">TheBeekeeper@sillybeesapiary.com</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <p class="contact-label">Region</p>
-                        <p class="contact-value">North & East Texas</p>
-                    </div>
-                </div>
-
-                <div class="contact-cta fade-in">
-                    <p>We sell direct.</p>
-                    <a href="mailto:TheBeekeeper@sillybeesapiary.com" class="cta-button-light">Order Honey</a>
-                </div>
-            </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container fade-in">
+            <p>Taste the honey that comes from hives like these.</p>
+            <a href="/home2/#contact" class="cta-button">Shop Honey</a>
         </div>
     </section>
 
