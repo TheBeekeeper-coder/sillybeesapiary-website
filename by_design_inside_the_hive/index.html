@@ -243,51 +243,6 @@
             margin-top: 2rem;
         }
 
-        /* Two-column Who We Are layout */
-        .who-we-are-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .who-we-are-text .section-subtitle {
-            text-align: left;
-        }
-
-        .who-we-are-text h2 {
-            text-align: left;
-        }
-
-        /* Scripture callout - styled for right column */
-        .scripture-visual {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .scripture {
-            background: white;
-            border-left: 3px solid var(--teal);
-            padding: 2rem 2.5rem;
-            max-width: 100%;
-        }
-
-        .scripture blockquote {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--brown);
-            margin-bottom: 0.5rem;
-        }
-
-        .scripture cite {
-            font-size: 0.9rem;
-            color: var(--teal);
-            font-style: normal;
-            letter-spacing: 0.05em;
-        }
-
         /* Contact Section */
         .contact {
             background: var(--teal);
@@ -377,27 +332,6 @@
         }
 
         /* Responsive */
-        @media (max-width: 900px) {
-            .who-we-are-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .who-we-are-text .section-subtitle,
-            .who-we-are-text h2 {
-                text-align: center;
-            }
-
-            .scripture-visual {
-                order: -1;
-            }
-
-            .scripture {
-                margin: 0 auto;
-                max-width: 500px;
-            }
-        }
-
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -459,36 +393,29 @@
     <!-- Life Lessons Section -->
     <section class="lessons-section">
         <div class="section-container">
-            <div class="who-we-are-content">
-                <div class="who-we-are-text fade-in">
-                    <h2>Who We Are</h2>
-                    <div class="lessons-content">
-                        <p>We've learned a lot from the hive.</p>
+            <div class="section-header">
+                <h2>Life Lessons From The Hive</h2>
+            </div>
 
-                        <p>Bees work together. Every single one contributes to something larger than herself. A hive isn't a collection of individuals doing their own thing — it's a family with a shared purpose.</p>
+            <div class="lessons-content fade-in">
+                <p>We've learned a lot from the hive.</p>
 
-                        <p>A bee's role changes over her lifetime. She starts as a nurse, caring for the young. Then she builds comb, guards the entrance, and finally forages in the fields. She serves where she's needed, when she's needed.</p>
+                <p>Bees work together. Every single one contributes to something larger than herself. A hive isn't a collection of individuals doing their own thing — it's a family with a shared purpose.</p>
 
-                        <p>The queen is cared for and provided for — not because she demands it, but because the hive knows her role matters. There's no resentment. Just provision.</p>
+                <p>A bee's role changes over her lifetime. She starts as a nurse, caring for the young. Then she builds comb, guards the entrance, and finally forages in the fields. She serves where she's needed, when she's needed.</p>
 
-                        <p>And when the hive grows too full, they don't fight for space. They plan. They raise a new queen. They split — one family becoming two, both stronger for it.</p>
+                <p>The queen is cared for and provided for — not because she demands it, but because the hive knows her role matters. There's no resentment. Just provision.</p>
 
-                        <div class="lessons-values">
-                            <span class="lesson-value">Work.</span>
-                            <span class="lesson-value">Service.</span>
-                            <span class="lesson-value">Provision.</span>
-                            <span class="lesson-value">Growth.</span>
-                        </div>
+                <p>And when the hive grows too full, they don't fight for space. They plan. They raise a new queen. They split — one family becoming two, both stronger for it.</p>
 
-                        <p class="lessons-closing">The hive has a lot to teach.</p>
-                    </div>
+                <div class="lessons-values">
+                    <span class="lesson-value">Work.</span>
+                    <span class="lesson-value">Service.</span>
+                    <span class="lesson-value">Provision.</span>
+                    <span class="lesson-value">Growth.</span>
                 </div>
-                <div class="scripture-visual fade-in">
-                    <div class="scripture">
-                        <blockquote>"Your words are like honey on my lips."</blockquote>
-                        <cite>— Psalm 119:103</cite>
-                    </div>
-                </div>
+
+                <p class="lessons-closing">The hive has a lot to teach.</p>
             </div>
         </div>
     </section>
