@@ -30,7 +30,7 @@
     </script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;600&display=swap');
 
         :root {
             --cream: #faf6e9;
@@ -277,22 +277,29 @@
 
         .hero h1 {
             margin-top: 0;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-texas-honey {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--teal);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .script-texas {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            font-weight: 600;
         }
 
         .hero-tagline {
-            font-size: 1.4rem;
-            color: var(--brown-light);
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-
-        .hero-subtitle {
             font-size: 1.1rem;
-            color: var(--brown);
+            color: var(--brown-light);
             margin-bottom: 2.5rem;
-            font-style: italic;
+            font-weight: 400;
+            letter-spacing: 0.15em;
         }
 
         .cta-button {
@@ -337,7 +344,7 @@
         /* Hero Flower Decoration */
         .hero-flower {
             text-align: center;
-            margin-bottom: -5rem;
+            margin-bottom: -4rem;
         }
 
         .flower-img {
@@ -767,12 +774,12 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <h1>Silly Bees Apiary</h1>
             <div class="hero-flower">
                 <img src="images/Flower.png" alt="Wildflower decoration" class="flower-img">
             </div>
-            <h1>Silly Bees Apiary</h1>
-            <p class="hero-tagline">Raw. Unfiltered. Hand Bottled.</p>
-            <p class="hero-subtitle">Texas wildflower honey from our family.</p>
+            <p class="hero-texas-honey"><span class="script-texas">Texas</span> Honey</p>
+            <p class="hero-tagline">• RAW • UNFILTERED • HAND BOTTLED •</p>
             <a href="#contact" class="cta-button">Shop Honey</a>
         </div>
         <div class="scroll-hint">Scroll</div>
