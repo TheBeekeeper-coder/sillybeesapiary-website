@@ -243,13 +243,34 @@
             margin-top: 2rem;
         }
 
-        /* Scripture callout */
+        /* Two-column Who We Are layout */
+        .who-we-are-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .who-we-are-text .section-subtitle {
+            text-align: left;
+        }
+
+        .who-we-are-text h2 {
+            text-align: left;
+        }
+
+        /* Scripture callout - styled for right column */
+        .scripture-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .scripture {
             background: var(--cream);
             border-left: 3px solid var(--teal);
             padding: 2rem 2.5rem;
-            margin: 4rem auto;
-            max-width: 700px;
+            max-width: 100%;
         }
 
         .scripture blockquote {
@@ -356,6 +377,27 @@
         }
 
         /* Responsive */
+        @media (max-width: 900px) {
+            .who-we-are-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .who-we-are-text .section-subtitle,
+            .who-we-are-text h2 {
+                text-align: center;
+            }
+
+            .scripture-visual {
+                order: -1;
+            }
+
+            .scripture {
+                margin: 0 auto;
+                max-width: 500px;
+            }
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -417,30 +459,37 @@
     <!-- Life Lessons Section -->
     <section class="lessons-section">
         <div class="section-container">
-            <div class="lessons-content fade-in">
-                <p>We've learned a lot from the hive.</p>
+            <div class="who-we-are-content">
+                <div class="who-we-are-text fade-in">
+                    <p class="section-subtitle">Who We Are</p>
+                    <h2>Life Lessons from the Hive</h2>
+                    <div class="lessons-content">
+                        <p>We've learned a lot from the hive.</p>
 
-                <p>Bees work together. Every single one contributes to something larger than herself. A hive isn't a collection of individuals doing their own thing — it's a family with a shared purpose.</p>
+                        <p>Bees work together. Every single one contributes to something larger than herself. A hive isn't a collection of individuals doing their own thing — it's a family with a shared purpose.</p>
 
-                <p>A bee's role changes over her lifetime. She starts as a nurse, caring for the young. Then she builds comb, guards the entrance, and finally forages in the fields. She serves where she's needed, when she's needed.</p>
+                        <p>A bee's role changes over her lifetime. She starts as a nurse, caring for the young. Then she builds comb, guards the entrance, and finally forages in the fields. She serves where she's needed, when she's needed.</p>
 
-                <p>The queen is cared for and provided for — not because she demands it, but because the hive knows her role matters. There's no resentment. Just provision.</p>
+                        <p>The queen is cared for and provided for — not because she demands it, but because the hive knows her role matters. There's no resentment. Just provision.</p>
 
-                <p>And when the hive grows too full, they don't fight for space. They plan. They raise a new queen. They split — one family becoming two, both stronger for it.</p>
+                        <p>And when the hive grows too full, they don't fight for space. They plan. They raise a new queen. They split — one family becoming two, both stronger for it.</p>
 
-                <div class="lessons-values">
-                    <span class="lesson-value">Work.</span>
-                    <span class="lesson-value">Service.</span>
-                    <span class="lesson-value">Provision.</span>
-                    <span class="lesson-value">Growth.</span>
+                        <div class="lessons-values">
+                            <span class="lesson-value">Work.</span>
+                            <span class="lesson-value">Service.</span>
+                            <span class="lesson-value">Provision.</span>
+                            <span class="lesson-value">Growth.</span>
+                        </div>
+
+                        <p class="lessons-closing">The hive has a lot to teach.</p>
+                    </div>
                 </div>
-
-                <p class="lessons-closing">The hive has a lot to teach.</p>
-            </div>
-
-            <div class="scripture fade-in">
-                <blockquote>"Your words are like honey on my lips."</blockquote>
-                <cite>— Psalm 119:103</cite>
+                <div class="scripture-visual fade-in">
+                    <div class="scripture">
+                        <blockquote>"Your words are like honey on my lips."</blockquote>
+                        <cite>— Psalm 119:103</cite>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
