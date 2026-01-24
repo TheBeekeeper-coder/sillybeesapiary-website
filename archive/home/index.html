@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Bees Apiary | Raw Wildflower Honey - Palestine, Texas | Anderson, Dallas, Ellis, Henderson, Navarro Counties</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐝</text></svg>">
+    <meta name="description" content="Silly Bees Apiary produces organic, raw wildflower honey in Palestine, Texas and Midlothian, Texas. Serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Family-owned beekeepers for 3 years. Bee removal services in Ellis County.">
+    <meta name="keywords" content="raw honey Palestine Texas, wildflower honey Ellis County, local honey Navarro County, organic honey Henderson County, bee removal Ellis County, honey Hillsboro, Dallas honey, Anderson County apiary">
+    <meta name="author" content="Silly Bees Apiary">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Palestine, Anderson County, Texas; Midlothian, Ellis County, Texas">
+    <meta name="ICBM" content="31.7621, -95.6307; 32.4823, -96.9947">
+    
+    
+    <!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Silly Bees Apiary",
+  "description": "Organic raw wildflower honey producer serving North and East Texas",
+  "url": "https://sillybeesapiary.com",
+  "telephone": "214-769-5511",
+  "email": "TheBeekeeper@sillybeesapiary.com",
+  "location": [
+    {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palestine",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "31.7621",
+        "longitude": "-95.6307"
+      },
+      "name": "Palestine Location"
+    },
+    {
+      "@type": "Place", 
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Midlothian",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "32.4823",
+        "longitude": "-96.9947"
+      },
+      "name": "Midlothian Location"
+    }
+  ],
+  "areaServed": [
+    "Anderson County, TX",
+    "Dallas County, TX",
+    "Ellis County, TX",
+    "Henderson County, TX",
+    "Navarro County, TX"
+  ]
+}
+</script>    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Silly Bees Apiary - Raw Wildflower Honey from Palestine, Texas">
+    <meta property="og:description" content="Family-owned apiary producing organic, raw wildflower honey. Serving Anderson, Dallas, Ellis, Henderson, Navarro Counties.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sillybeesapiary.com">
+    <meta property="og:site_name" content="Silly Bees Apiary">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Theme Toggle Switch */
+        .theme-toggle {
+            position: fixed;
+            top: 100px;
+            right: 30px;
+            z-index: 1001;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ffb300;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .toggle-label {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #5d4037;
+            font-size: 14px;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .slider-label {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .whimsical-label { color: #ff6f00; }
+        .edgy-label { color: #333; }
+
+        .theme-slider {
+            width: 60px;
+            height: 30px;
+            background: #ddd;
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .theme-slider.whimsical {
+            background: #ffb300;
+        }
+
+        .slider-thumb {
+            width: 26px;
+            height: 26px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .theme-slider.edgy .slider-thumb {
+            transform: translateX(30px);
+            background: #333;
+        }
+
+        /* Base styles that work for both themes */
+        body {
+            font-family: 'Comic Neue', cursive;
+            overflow-x: hidden;
+            line-height: 1.6;
+            transition: all 0.5s ease;
+        }
+
+        /* Whimsical Theme (Default) */
+        body.whimsical {
+            background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 50%, #ffecb3 100%);
+            color: #5d4037;
+        }
+
+        /* Edgy Theme */
+        body.edgy {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+        }
+
+        /* Animated background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Whimsical floating elements */
+        .floating-element {
+            position: absolute;
+            animation: float 8s ease-in-out infinite;
+            font-size: 2rem;
+            transition: opacity 0.5s ease;
+        }
+
+        .bee { animation-delay: 0s; }
+        .flower { animation-delay: 2s; color: #e91e63; }
+        .honeypot { animation-delay: 4s; color: #ff9800; }
+
+        .floating-element:nth-child(1) { top: 10%; left: 10%; }
+        .floating-element:nth-child(2) { top: 20%; right: 15%; }
+        .floating-element:nth-child(3) { bottom: 30%; left: 20%; }
+        .floating-element:nth-child(4) { bottom: 15%; right: 10%; }
+        .floating-element:nth-child(5) { top: 60%; left: 5%; }
+        .floating-element:nth-child(6) { top: 40%; right: 25%; }
+
+        /* Edgy hexagons - static grid with pulse */
+        .hexagon {
+            position: fixed;
+            width: 80px;
+            height: 70px;
+            background: rgba(255, 193, 7, 0.03);
+            border: 1px solid rgba(255, 193, 7, 0.15);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            animation: hexPulse 4s ease-in-out infinite;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .hexagon:nth-child(7) { top: 10%; left: 5%; animation-delay: 0s; }
+        .hexagon:nth-child(8) { top: 15%; right: 8%; animation-delay: 0.5s; }
+        .hexagon:nth-child(9) { top: 40%; left: 3%; animation-delay: 1s; }
+        .hexagon:nth-child(10) { top: 60%; right: 5%; animation-delay: 1.5s; }
+        .hexagon:nth-child(11) { bottom: 20%; left: 8%; animation-delay: 2s; }
+        .hexagon:nth-child(12) { bottom: 30%; right: 3%; animation-delay: 2.5s; }
+        .hexagon:nth-child(13) { top: 75%; left: 2%; animation-delay: 3s; }
+
+        /* Scanline overlay for tactical feel */
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.1) 2px,
+                rgba(0, 0, 0, 0.1) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .scan-beam {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.3), transparent);
+            animation: scanMove 8s linear infinite;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        body.edgy .scanline { opacity: 0.4; }
+        body.edgy .scan-beam { opacity: 1; }
+        body.whimsical .scanline { opacity: 0; }
+        body.whimsical .scan-beam { opacity: 0; }
+        
+        /* Show/hide elements based on theme */
+        body.edgy .floating-element { opacity: 0; pointer-events: none; display: none; }
+        body.edgy .hexagon { opacity: 1; }
+        body.whimsical .hexagon { opacity: 0; pointer-events: none; display: none; }
+        body.whimsical .floating-element { opacity: 1; }
+
+        body.edgy .bg-animation {
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 152, 0, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-30px) rotate(10deg); opacity: 1; }
+        }
+
+        @keyframes hexPulse {
+            0%, 100% {
+                border-color: rgba(255, 193, 7, 0.15);
+                background: rgba(255, 193, 7, 0.03);
+                box-shadow: none;
+            }
+            50% {
+                border-color: rgba(255, 193, 7, 0.4);
+                background: rgba(255, 193, 7, 0.08);
+                box-shadow: 0 0 20px rgba(255, 193, 7, 0.2), inset 0 0 15px rgba(255, 193, 7, 0.1);
+            }
+        }
+
+        @keyframes scanMove {
+            0% { top: -4px; }
+            100% { top: 100vh; }
+        }
+
+        /* Glitch text effect for edgy theme */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes glitchColor {
+            0% { text-shadow: 2px 0 #ff0000, -2px 0 #00ffff; }
+            25% { text-shadow: -2px 0 #ff0000, 2px 0 #00ffff; }
+            50% { text-shadow: 2px 0 #00ffff, -2px 0 #ff0000; }
+            75% { text-shadow: -2px 0 #00ffff, 2px 0 #ff0000; }
+            100% { text-shadow: 2px 0 #ff0000, -2px 0 #00ffff; }
+        }
+
+        body.edgy h1:hover,
+        body.edgy h2:hover,
+        body.edgy h3:hover {
+            animation: glitch 0.3s ease infinite, glitchColor 0.3s ease infinite;
+        }
+
+        /* Typing animation for edgy tagline */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blinkCursor {
+            0%, 100% { border-color: #ffc107; }
+            50% { border-color: transparent; }
+        }
+
+        body.edgy .tagline.typing-effect {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #ffc107;
+            width: 0;
+            animation: typing 4s steps(25, end) forwards, blinkCursor 0.7s step-end 6;
+            display: inline-block;
+        }
+
+        /* Pulsing LIVE indicator */
+        .live-indicator {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .live-dot {
+            width: 10px;
+            height: 10px;
+            background: #ff3333;
+            border-radius: 50%;
+            animation: livePulse 1.5s ease-in-out infinite;
+            box-shadow: 0 0 10px #ff3333;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 10px #ff3333; }
+            50% { opacity: 0.5; transform: scale(0.8); box-shadow: 0 0 5px #ff3333; }
+        }
+
+        body.edgy .live-indicator { display: inline-flex; }
+        body.whimsical .live-indicator { display: none; }
+
+        /* Hex grid background pattern */
+        .hex-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffc107' fill-opacity='0.05'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        body.edgy .hex-grid { opacity: 1; }
+        body.whimsical .hex-grid { opacity: 0; }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 30px;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical header {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 3px solid #ffb300;
+            box-shadow: 0 2px 20px rgba(255, 179, 0, 0.3);
+        }
+
+        body.edgy header {
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .logo {
+            font-family: 'Fredoka', sans-serif;
+            color: #ff6f00;
+            text-shadow: 2px 2px 4px rgba(255, 111, 0, 0.3);
+        }
+
+        body.edgy .logo {
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            color: #ffc107;
+            text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        body.whimsical .nav-links a {
+            color: #5d4037;
+        }
+
+        body.whimsical .nav-links a:hover {
+            background: #ffb300;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        body.edgy .nav-links a {
+            color: #ffffff;
+            border-radius: 0;
+            padding: 8px 0;
+        }
+
+        body.edgy .nav-links a:hover {
+            color: #ffc107;
+            text-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+        }
+
+        body.edgy .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffc107;
+            transition: width 0.3s ease;
+        }
+
+        body.edgy .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        body.whimsical .hero {
+            background: radial-gradient(circle at center, rgba(255, 193, 7, 0.1) 0%, transparent 70%);
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .hero-content h1 {
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(45deg, #ff6f00, #ffb300, #ffc107);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 10px rgba(255, 111, 0, 0.3);
+            animation: bounce 2s ease-in-out infinite alternate;
+        }
+
+        body.edgy .hero-content h1 {
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ffc107, #ff8f00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 193, 7, 0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(255, 193, 7, 0.6)); }
+        }
+
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .hero-content .tagline {
+            color: #6d4c41;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        body.edgy .hero-content .tagline {
+            color: #cccccc;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .hero-content .subtitle {
+            color: #5d4037;
+        }
+
+        body.edgy .hero-content .subtitle {
+            color: #888;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: none;
+        }
+
+        body.whimsical .cta-button {
+            background: linear-gradient(45deg, #ff6f00, #ffb300);
+            color: white;
+            box-shadow: 0 8px 25px rgba(255, 111, 0, 0.4);
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        body.whimsical .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(255, 111, 0, 0.6);
+        }
+
+        body.edgy .cta-button {
+            background: linear-gradient(45deg, #ffc107, #ff8f00);
+            color: #000;
+            box-shadow: 0 5px 20px rgba(255, 193, 7, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body.edgy .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 193, 7, 0.5);
+        }
+
+        /* Content sections */
+        .content-section {
+            padding: 100px 50px;
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 30px;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .content-section {
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 40px rgba(255, 179, 0, 0.2);
+        }
+
+        body.edgy .content-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 193, 7, 0.1);
+            border-radius: 15px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 60px;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .section-title {
+            font-family: 'Fredoka', sans-serif;
+            color: #ff6f00;
+            text-shadow: 2px 2px 8px rgba(255, 111, 0, 0.3);
+        }
+
+        body.edgy .section-title {
+            font-family: 'Orbitron', monospace;
+            color: #ffc107;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .card {
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+        }
+
+        body.whimsical .card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 3px solid #ffb300;
+            box-shadow: 0 8px 25px rgba(255, 179, 0, 0.2);
+        }
+
+        body.whimsical .card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            border-color: #ff6f00;
+            box-shadow: 0 15px 35px rgba(255, 111, 0, 0.3);
+        }
+
+        body.edgy .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 193, 7, 0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        body.edgy .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 193, 7, 0.5);
+            box-shadow: 0 20px 40px rgba(255, 193, 7, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .card h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: #ff6f00;
+        }
+
+        body.edgy .card h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: #ffc107;
+        }
+
+        .card p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .card p {
+            color: #5d4037;
+        }
+
+        body.edgy .card p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* Contact specific */
+        .contact-info {
+            max-width: 600px;
+            margin: 40px auto 0;
+        }
+
+        .contact-item {
+            margin: 25px 0;
+            font-size: 1.2rem;
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .contact-item {
+            color: #5d4037;
+            background: rgba(255, 248, 225, 0.8);
+            border-left: 5px solid #ffb300;
+        }
+
+        body.edgy .contact-item {
+            color: #cccccc;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid rgba(255, 193, 7, 0.5);
+        }
+
+        .contact-item strong {
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .contact-item strong {
+            color: #ff6f00;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        body.edgy .contact-item strong {
+            color: #ffc107;
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Footer */
+        footer {
+            color: white;
+            padding: 40px 50px;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-top: 50px;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical footer {
+            background: linear-gradient(135deg, #ff6f00, #ffb300);
+        }
+
+        body.edgy footer {
+            background: #000;
+            border-top: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            animation: bounce-arrow 2s infinite;
+            transition: all 0.5s ease;
+        }
+
+        body.whimsical .scroll-indicator {
+            color: #ff6f00;
+        }
+
+        body.edgy .scroll-indicator {
+            color: #ffc107;
+        }
+
+        @keyframes bounce-arrow {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .theme-toggle {
+                top: 80px;
+                right: 15px;
+                padding: 15px;
+                min-width: 120px;
+            }
+            
+            header {
+                padding: 15px 20px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 16px;
+                padding: 6px 12px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-content .tagline {
+                font-size: 1.4rem;
+            }
+            
+            .content-section, .territory {
+                padding: 60px 20px;
+                margin: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="whimsical">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <div class="toggle-label">Choose Your Hive</div>
+        <div class="slider-container">
+            <span class="slider-label whimsical-label">🐝</span>
+            <div class="theme-slider whimsical" id="themeSlider">
+                <div class="slider-thumb"></div>
+            </div>
+            <span class="slider-label edgy-label">⚡</span>
+        </div>
+    </div>
+
+    <div class="bg-animation">
+        <!-- Whimsical elements -->
+        <div class="floating-element bee">🐝</div>
+        <div class="floating-element flower">🌻</div>
+        <div class="floating-element honeypot">🍯</div>
+        <div class="floating-element bee">🐝</div>
+        <div class="floating-element flower">🌸</div>
+        <div class="floating-element honeypot">🍯</div>
+        
+        <!-- Edgy hexagons -->
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+        <div class="hexagon"></div>
+    </div>
+
+    <!-- Edgy scanline effects -->
+    <div class="scanline"></div>
+    <div class="scan-beam"></div>
+    <div class="hex-grid"></div>
+
+    <header>
+        <nav>
+            <div class="logo" id="logo">🐝 SILLY BEES APIARY</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Silly Bees Apiary</h1>
+            <div class="tagline" id="tagline">Sweet Dreams Are Made of Bees! 🍯</div>
+            <p class="subtitle" id="subtitle">
+                Based in Palestine, Texas and Midlothian, Texas, we harvest nature's sweetest treasure! 
+                Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of buzzing with excitement, delivering liquid sunshine with love!
+            </p>
+            <a href="#about" class="cta-button" id="ctaButton">Buzz With Us! 🐝</a>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">🍯</div>
+    </section>
+
+    <section class="content-section" id="about">
+        <h2 class="section-title" id="aboutTitle">Our Sweet Story 🌻</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 id="card1Title">🐝 Happy Bee Families</h3>
+                <p id="card1Text">Based in Palestine, Texas and Midlothian, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!</p>
+            </div>
+            <div class="card">
+                <h3 id="card2Title">🍯 Liquid Sunshine</h3>
+                <p id="card2Text">Every golden jar of our raw wildflower honey is a gift from nature! Harvested with love and respect using gentle, chemical-free methods that keep our buzzing friends happy. Spreading sweetness across Anderson, Dallas, Ellis, Henderson, and Navarro Counties!</p>
+            </div>
+            <div class="card">
+                <h3 id="card3Title">🌟 Bee Heroes</h3>
+                <p id="card3Text">Beyond honey magic, we're bee rescue heroes! When unwanted bee families need a new home in Ellis County, our caring team provides safe, gentle relocation services. Every bee deserves a happy ending and a chance to keep making the world sweeter!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section contact" id="contact">
+        <h2 class="section-title" id="contactTitle">Buzz Us! 📞</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong id="contactLabel1">🏡 SWEET HOME BASE:</strong> Anderson, Dallas, Ellis, Henderson, Navarro Counties
+            </div>
+            <div class="contact-item">
+                <strong id="contactLabel2">📧 SEND SWEET MESSAGES:</strong> <a href="mailto:TheBeekeeper@sillybeesapiary.com" style="color: #ff6f00; text-decoration: none;" id="emailLink">TheBeekeeper@sillybeesapiary.com</a>
+            </div>
+            <div class="contact-item">
+                <strong id="contactLabel3">🌟 SPECIALTIES:</strong> Raw Wildflower Honey 🍯, Bee Rescue Heroes (Ellis County) 🦸‍♀️
+            </div>
+            <div class="contact-item" style="margin-top: 40px; font-style: italic;" id="statusUpdate">
+                <strong id="statusLabel">🚧 BUZZING UPDATE:</strong> More sweet surprises coming soon! Stay tuned for honey-filled adventures! 🎉
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p id="footerText">© <span id="currentYear"></span> Silly Bees Apiary 🐝 Spreading sweetness, one jar at a time! 🍯💕</p>
+    </footer>
+
+    <script>
+        // Theme content objects
+        const themeContent = {
+            whimsical: {
+                logo: "🐝 SILLY BEES APIARY",
+                tagline: "Sweet Dreams Are Made of Bees! 🍯",
+                subtitle: "Based in Palestine, Texas and Midlothian, Texas, we harvest nature's sweetest treasure! Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of buzzing with excitement, delivering liquid sunshine with love!",
+                ctaButton: "Buzz With Us! 🐝",
+                scrollIndicator: "🍯",
+                aboutTitle: "Our Sweet Story 🌻",
+                card1Title: "🐝 Happy Bee Families",
+                card1Text: "Based in Palestine, Texas and Midlothian, Texas, our buzzing bee families are more than insects—they're our partners in sweetness! Each hive houses 50,000+ happy workers creating the most delicious organic, raw wildflower honey in East Texas. Three years of joyful beekeeping adventures!",
+                card2Title: "🍯 Liquid Sunshine",
+                card2Text: "Every golden jar of our raw wildflower honey is a gift from nature! Harvested with love and respect using gentle, chemical-free methods that keep our buzzing friends happy. Spreading sweetness across Anderson, Dallas, Ellis, Henderson, and Navarro Counties!",
+                card3Title: "🌟 Bee Heroes",
+                card3Text: "Beyond honey magic, we're bee rescue heroes! When unwanted bee families need a new home in Ellis County, our caring team provides safe, gentle relocation services. Every bee deserves a happy ending and a chance to keep making the world sweeter!",
+                contactTitle: "Buzz Us! 📞",
+                contactLabel1: "🏡 SWEET HOME BASE:",
+                contactLabel2: "📧 SEND SWEET MESSAGES:",
+                contactLabel3: "🌟 SPECIALTIES:",
+                statusLabel: "🚧 BUZZING UPDATE:",
+                statusUpdate: "More sweet surprises coming soon! Stay tuned for honey-filled adventures! 🎉",
+                footerText: `© ${new Date().getFullYear()} Silly Bees Apiary 🐝 Spreading sweetness, one jar at a time! 🍯💕`,
+                mapFilter: "filter: saturate(1.2) brightness(1.1);",
+                mapBorder: "border: 4px solid #ffb300; box-shadow: 0 10px 30px rgba(255, 179, 0, 0.3);"
+            },
+            edgy: {
+                logo: "SILLY BEES",
+                tagline: "THE HIVE NEVER SLEEPS",
+                subtitle: "Based in Palestine, Texas and Midlothian, Texas, we harvest liquid gold from nature's most organized society. Our family-owned apiary produces organic, raw wildflower honey serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties. Three years of dedicated beekeeping, delivering premium honey with precision.",
+                ctaButton: "Enter the Hive",
+                scrollIndicator: "▼",
+                aboutTitle: "THE OPERATION",
+                card1Title: "🐝 THE COLONY",
+                card1Text: "Based in Palestine, Texas and Midlothian, Texas, our bees are more than insects—they're a highly trained operation. Each hive houses 50,000+ workers producing the finest organic, raw wildflower honey in East Texas. Three years of family beekeeping expertise.",
+                card2Title: "🍯 LIQUID GOLD",
+                card2Text: "Every jar of our raw wildflower honey is earned through sustainable, chemical-free methods. Harvested with respect for the ancient contract between beekeeper and bee, serving Anderson, Dallas, Ellis, Henderson, and Navarro Counties.",
+                card3Title: "⚡ EXTRACTION PROTOCOL",
+                card3Text: "Beyond honey production, we offer professional bee removal services throughout Ellis County. When unwanted hives need relocation, our experienced team ensures safe, humane removal while protecting these vital pollinators.",
+                contactTitle: "SECURE CHANNEL",
+                contactLabel1: "LOCATION:",
+                contactLabel2: "ENCRYPTED EMAIL:",
+                contactLabel3: "SPECIALTIES:",
+                statusLabel: '<span class="live-indicator"><span class="live-dot"></span>LIVE</span> STATUS:',
+                statusUpdate: "Hive expansion in progress... More intel coming soon.",
+                useHtmlLabel: true,
+                footerText: `© ${new Date().getFullYear()} Silly Bees Apiary. The hive protects its own.`,
+                mapFilter: "filter: hue-rotate(30deg) contrast(1.1) brightness(0.8);",
+                mapBorder: "border: 2px solid rgba(255, 193, 7, 0.3); filter: drop-shadow(0 0 20px rgba(255, 193, 7, 0.2));"
+            }
+        };
+
+        // Theme toggle functionality
+        const themeSlider = document.getElementById('themeSlider');
+        const body = document.body;
+        let isEdgy = false;
+
+        themeSlider.addEventListener('click', function() {
+            isEdgy = !isEdgy;
+            
+            if (isEdgy) {
+                body.classList.remove('whimsical');
+                body.classList.add('edgy');
+                themeSlider.classList.remove('whimsical');
+                themeSlider.classList.add('edgy');
+                updateContent('edgy');
+            } else {
+                body.classList.remove('edgy');
+                body.classList.add('whimsical');
+                themeSlider.classList.remove('edgy');
+                themeSlider.classList.add('whimsical');
+                updateContent('whimsical');
+            }
+        });
+
+        // Update content based on theme
+        function updateContent(theme) {
+            const content = themeContent[theme];
+            
+            // Update all text content
+            Object.keys(content).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (key.includes('Description')) {
+                        element.innerHTML = content[key];
+                    } else if (key.includes('Label') && key.includes('stat')) {
+                        element.innerHTML = content[key];
+                    } else {
+                        element.textContent = content[key];
+                    }
+                }
+            });
+
+            // Update map styling
+            const mapFrame = document.getElementById('mapFrame');
+            const mapContainer = document.getElementById('mapContainer');
+            if (mapFrame && mapContainer) {
+                mapFrame.style.cssText = `border:0; transition: filter 0.5s ease; ${content.mapFilter}`;
+                mapContainer.style.cssText = `position: relative; width: 100%; max-width: 800px; margin: 0 auto; border-radius: 20px; overflow: hidden; transition: all 0.5s ease; ${content.mapBorder}`;
+            }
+
+            // Update email link color
+            const emailLink = document.getElementById('emailLink');
+            if (emailLink) {
+                emailLink.style.color = theme === 'whimsical' ? '#ff6f00' : '#ffc107';
+            }
+
+            // Update map description styling
+            const mapDescription = document.getElementById('mapDescription');
+            if (mapDescription) {
+                mapDescription.innerHTML = content.mapDescription;
+                mapDescription.style.color = theme === 'whimsical' ? '#5d4037' : '#cccccc';
+            }
+
+            // Update status styling
+            const statusUpdate = document.getElementById('statusUpdate');
+            if (statusUpdate) {
+                statusUpdate.style.color = theme === 'whimsical' ? '#ff6f00' : '#ffc107';
+                statusUpdate.style.borderLeft = theme === 'whimsical' ? '5px solid #ff6f00' : '3px solid rgba(255, 193, 7, 0.5)';
+                // Update the status text with HTML for edgy LIVE indicator
+                statusUpdate.innerHTML = `<strong id="statusLabel">${content.statusLabel}</strong> ${content.statusUpdate}`;
+            }
+
+            // Handle typing animation for tagline in edgy mode
+            const tagline = document.getElementById('tagline');
+            if (tagline) {
+                if (theme === 'edgy') {
+                    tagline.classList.add('typing-effect');
+                    // Reset animation by removing and re-adding class
+                    tagline.style.animation = 'none';
+                    tagline.offsetHeight; // Trigger reflow
+                    tagline.style.animation = null;
+                } else {
+                    tagline.classList.remove('typing-effect');
+                }
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add parallax effect to floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const elements = document.querySelectorAll('.floating-element, .hexagon');
+
+            elements.forEach((element, index) => {
+                const speed = 0.3 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
